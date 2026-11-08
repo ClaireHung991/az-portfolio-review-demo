@@ -7,7 +7,7 @@
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin="">
 <link href="https://fonts.googleapis.com/css2?family=IBM+Plex+Sans:wght@400;500;600&amp;family=IBM+Plex+Serif:wght@500;600&amp;display=swap" rel="stylesheet">
-<script type='text/javascript' nonce='HB9HME7xjwxtZdwEtDqqgA==' src='https://2fa8ec51-f2f4-4aea-8da2-b1dabfb8ef8a.frame.claudeusercontent.com/YsSOt2SqOv2n05oVYpdNfi0GUhgZQFnY-jScWL-OdSBGJSSaObpS2iIipjqg1CvOHS6uF7LeHJp5Y5fsTc_OoeaDb4v3kFJflcmCM51-ZoYFWh3NroWRMoVQiXtVm2iOI2w730x0q7GiMF3hh4JRGsvSBL8RA6y4nf6rQIK6NiwtMzy75zUg3yOuB23FiI8ieGR85v-xfAKC2KiT5k-z4uoKB80K4eUYaQ-7n-bBL5nN19--I_DW9-knb9DZmH4yLQiCmgzZNJUyTJkD0-vJwAEDPhA9k2r33BHEeTOfF1GfGrd5cBTZ7jByHJqTPawxftQC-G4Q5gq1nJ31ySUCq0LNxVfrDmaifTB-XnbrP0sSuz9Xw1Wykzqd2KIaz5kcrPiY7jHhJceKZx-B-a9-3AxfMSAatWsOq3XukPGifvnaNOoj1KzbSQ_vYKuwQ3x4d2koulkGu5x3NUxV_ukzOd1OHeI18XpYqft5kwLBVp3WPP2VZxR0l-B-pQOhqQTHc1BBBe4tRXvc_37uBjODcwuSsGh4_KvUiDx9Q_YxP48ZaPB46mU7bD-Gz-pBDQjYSIfZKdGLUT_8C5u0NOKxDLZ2BFsg7rIyzy41ISQ6AGiOBZULEOSuSnSFd6Hl0zKvApNs3fXWKaqisc_bj93VzAzPZw8kCyQhsX7T9YfDCoXXv6LHeZjd-RuCTV8IimsrlccjF9_2z7wrCsOnOkB3cA'></script><script src="https://cdnjs.cloudflare.com/ajax/libs/Chart.js/4.4.1/chart.umd.min.js"></script>
+<script type='text/javascript' nonce='rCRraUNpH+B+B3WizUrINA==' src='https://2fa8ec51-f2f4-4aea-8da2-b1dabfb8ef8a.frame.claudeusercontent.com/r6ZhD1FfuxYpDMh02RVziccHnFHWKv_f6pDxuiCqaVIWLdeWpOVnq-mCcErcBvYsiFMJHt9P0FVqQMUQc8BnFfN1TsF6I9-C8IOL8S7ylyoCAeGNPd6FaqZKWrdbPpK99QDbCXpANAwgeJupAIdREWtYafQgrVgmDtbc6wsgN5BwxFJOezFCZ_egQwMxCikqQ1KY5DqAKh1QKzLiWO-A7UqXX3GV1ewh4wMNbj7c0tScNX0IaOyhGxHEq3f_bSybtTkjHln6NDCU2yxtB4EWRJ6uhTa05hUKez-xG8KEkawEW4CFy-b4FAHzPXN3QJsGil213A0I_cMDyS9wLivlVD3RgYdPoO9Su3ondkD5FgNy156OCkdYGabQ7K0DwYgtlvED3kYSfpNQfLj3yd7iww8S6DNUqoGlV0RJzXybNmF_HY5IwHLRHtnY_uEM0NVlJTEMNUbHCBWtr8o1FzSyOo6dAx7pYzSj7rmoxxKDT7laP8YxzWuUfInRvEda1G55jQhfpkZW1wsCqiceVetO9lwg-ad47ea-NyGowqLdx81u7AVLPdaqfQz2_JCer_B4DHQd-yxfO5MDjAYtk_xtAmXp1ueSmusxAwdZwO5DkAluwwPmmobeAwR-Xx-xfKfnHufnLuj5KMjnQFslkq0t_-67_CyyoePpwXGFjUWnoYQfPtfNURDjvx9YAhTwGsTfYsrYPtx6t2FG2B9j9rnu2w'></script><script src="https://cdnjs.cloudflare.com/ajax/libs/Chart.js/4.4.1/chart.umd.min.js"></script>
 <style>
 :root{
   --paper:#EBEFF3;--surface:#FFFFFF;--surface-2:#F5F7F9;--ink:#14212F;--muted:#5A6777;--line:#D5DDE5;
@@ -408,10 +408,26 @@ details.more ul{margin:6px 0 0;padding-left:18px;font-size:12.5px;color:var(--mu
 .ol-sel{display:flex;flex-direction:column;gap:5px}
 .ol-hint{font-size:12px;color:var(--muted);line-height:1.35}
 .ai-pill:not(.on){border-color:var(--warn);color:var(--warn)}
+.genbox{display:flex;align-items:center;gap:10px;flex-wrap:wrap;justify-content:flex-end}
+.genbox.center{flex-direction:column;align-items:center;gap:12px;text-align:center;color:var(--muted);font-size:14px}
+.genrow{display:flex;align-items:center;gap:10px;flex-wrap:wrap}
+select.langsel{width:auto;min-width:130px}
+.tabs{display:inline-flex;border:1px solid var(--line);border-radius:8px;overflow:hidden}
+.tabs button{all:unset;cursor:pointer;padding:6px 12px;font-size:13px;border-right:1px solid var(--line)}
+.tabs button:last-child{border-right:0}
+.tabs button.on{background:var(--accent);color:var(--accent-ink);font-weight:500}
+.tabs button:focus-visible{outline:2px solid var(--focus);outline-offset:-2px}
+.pdsum{display:grid;grid-template-columns:minmax(0,1fr) minmax(0,1fr);gap:16px;align-items:stretch}
+table.posn td{vertical-align:middle}
+table.posn .nm{font-weight:500}
+table.posn tr.tot td{border-top:2px solid var(--line);background:var(--surface-2)}
+.saved{display:inline-flex;align-items:center;gap:7px;font-size:12.5px;color:var(--muted);white-space:nowrap}
+.saved .dot{width:8px;height:8px;border-radius:50%;background:var(--ok)}
+.banner.ro{border-color:var(--line);background:var(--surface-2)}
 .tpl-help{display:flex;gap:10px;align-items:center;flex-wrap:wrap;font-size:12.5px;color:var(--muted);margin:-6px 0 6px}
 .linkbtn{all:unset;cursor:pointer;color:var(--accent);font-weight:500;display:inline-flex;gap:5px;align-items:center}
 .linkbtn:hover{text-decoration:underline}.linkbtn:focus-visible{outline:2px solid var(--focus);outline-offset:2px}
-@media (max-width:980px){ .top{flex-wrap:wrap;gap:10px} .rm-t,.ai-pill{display:none} .guide{width:100vw} }
+@media (max-width:980px){ .pdsum{grid-template-columns:minmax(0,1fr)} .top{flex-wrap:wrap;gap:10px} .rm-t,.ai-pill{display:none} .guide{width:100vw} }
 
 @media (max-width:980px){
   .grid2,.work,.charts2,.options{grid-template-columns:minmax(0,1fr)}
@@ -546,7 +562,23 @@ const PRODUCTS = [
   {id:"P16",name:"SGD Money Market Fund",type:"Fund",asset:"Cash",region:"Singapore",sector:"Money market",ccy:"SGD",risk:1,liq:"Daily",factor:"CASH",alpha:0.0002},
 ];
 const CASH_H = {id:"CASH",name:"SGD Cash Account",type:"Cash",asset:"Cash",region:"Singapore",sector:"Cash",ccy:"SGD",risk:1,liq:"Daily",factor:"CASH",alpha:-0.0005};
-const PROD = Object.fromEntries([...PRODUCTS, CASH_H].map(p => [p.id, p]));
+const DIRECT = [
+  {id:"D01",name:"Lion City Bank (share)",type:"Share",asset:"Equity",region:"Singapore",sector:"Financials",ccy:"SGD",risk:4,liq:"Daily",factor:"EQ_SG",alpha:0.002,code:"LCB.SI (fictional)",base:38.20},
+  {id:"D02",name:"Merlion Telecom 4.25% 2030 bond",type:"Bond",asset:"Fixed Income",region:"Singapore",sector:"Investment grade credit",ccy:"SGD",risk:2,liq:"Daily",credit:"IG",factor:"BD_IG",alpha:-0.0012,code:"MT 4.25 2030 (fictional)",base:101.25,perNominal:true},
+  {id:"D03",name:"Pacific Semiconductor Corp (share)",type:"Share",asset:"Equity",region:"United States",sector:"Technology",ccy:"USD",risk:5,liq:"Daily",factor:"EQ_TECH",alpha:0.001,code:"PSC US (fictional)",base:142.60},
+];
+const PROD = Object.fromEntries([...PRODUCTS, ...DIRECT, CASH_H].map(p => [p.id, p]));
+/* prices, quantities and FX (fictional) */
+const LOCAL_BASE = { P01:24.80, P02:58.40, P03:3.42, P04:512.30, P05:41.15, P06:33.70, P07:11.62, P08:8.94, P09:1.087, P10:46.20, P11:49.85, P12:9.73, P13:198.40, P14:1.86, P15:118.60, P16:1.0215 };
+const FX_USD = (() => { const d = [0.004,-0.006,0.003,-0.002,-0.005,0.002,0.001,-0.003,0.004,0.002,-0.004,0.001,-0.002,0.003,-0.001,-0.004,0.002,0.001,-0.003,0.002,0.001]; let v = 1.345; const a = [v]; d.forEach(x => { v *= 1 + x; a.push(v); }); return a; })();
+const _px = {};
+function priceSGD(id, k) { // k = snapshot index (0 = 1 Jan 2025, k = end of month k-1)
+  if (!_px[id]) { const P = PROD[id], b = P.base || LOCAL_BASE[id] || 1, a = [P.ccy === "USD" ? b * FX_USD[0] : b]; for (let m = 0; m <= LAST; m++) a.push(a[m] * (1 + prodRet(id, m))); _px[id] = a; }
+  return _px[id][k];
+}
+const fxAt = (ccy, k) => ccy === "USD" ? FX_USD[k] : 1;
+const priceLocal = (id, k) => priceSGD(id, k) / fxAt(PROD[id].ccy, k);
+const codeOf = id => PROD[id].code || (id === "CASH" ? "Cash" : `${PROD[id].type === "ETF" ? "ETF" : "FND"}-${id.slice(1)} (fictional)`);
 const prodRet = (id, m) => F[PROD[id].factor][m] + PROD[id].alpha;
 const ASSET_CLASSES = ["Equity","Fixed Income","Multi Asset","Cash","Commodity","Real Estate","Other"];
 
@@ -560,7 +592,7 @@ const CLIENTS = [
     limits:{maxEquity:0.65, maxHY:0.10, maxSingle:0.15, singleRiskyOnly:true, etfOnly:false, minLiquidity:null},
     targets:{"Equity":[0.40,0.65],"Fixed Income":[0.25,0.45],"Multi Asset":[0,0.15],"Commodity":[0,0.08],"Real Estate":[0,0.10],"Cash":[0.02,0.10]},
     bench:{EQ_WORLD:0.5, BD_IG:0.4, CASH:0.1}, benchLabel:"50% global equity, 40% investment grade bonds, 10% SGD cash",
-    holdings:{P01:560000,P02:600000,P04:560000,P07:1150000,P09:380000,P12:380000,P13:100000,CASH:150000},
+    holdings:{P01:560000,P02:600000,P04:560000,P07:1150000,P09:380000,P12:380000,P13:100000,D01:150000,CASH:150000},
     txns:[
       {m:9, type:"Switch", from:"P07", to:"P02", amount:80000, note:"Client added to technology after Q3 2025 earnings"},
       {m:16, type:"Switch", from:"CASH", to:"P13", amount:50000, note:"Topped up gold as a diversifier"},
@@ -580,7 +612,7 @@ const CLIENTS = [
     limits:{maxEquity:0.30, maxHY:0.05, maxSingle:0.30, etfOnly:false, minLiquidity:300000},
     targets:{"Equity":[0.10,0.30],"Fixed Income":[0.50,0.80],"Multi Asset":[0,0.10],"Commodity":[0,0.05],"Real Estate":[0,0.05],"Cash":[0.05,0.15]},
     bench:{EQ_WORLD:0.2, BD_IG:0.7, CASH:0.1}, benchLabel:"20% global equity, 70% investment grade bonds, 10% SGD cash",
-    holdings:{P03:280000,P07:650000,P08:230000,P09:760000,P11:240000,P12:140000,P16:180000,CASH:60000},
+    holdings:{P03:280000,P07:650000,P08:230000,P09:760000,P11:240000,P12:140000,P16:180000,D02:200000,CASH:60000},
     txns:[
       {m:6, type:"Contribution", to:"P16", amount:50000, note:"Savings set aside for education"},
       {m:13, type:"Switch", from:"P09", to:"P08", amount:100000, note:"Client requested higher yield"},
@@ -640,17 +672,17 @@ CLIENTS.push(
     external:[{name:"CPF Special Account", asset:"Cash", region:"Singapore", ccy:"SGD", value:220000, date:"30 Sep 2026", inst:"CPF Board"}] }),
   mkClient({ id:"C5", name:"David Wong", cid:"AZ-10618", email:"david.wong@example.com", riskLevel:4, since:"2017",
     objectives:"Long term capital growth with some Asian exposure", preferences:"Interested in technology and healthcare themes", goals:"Target return of 7.5% a year",
-    holdings:{P01:900000,P04:900000,P06:450000,P02:380000,P10:700000,P13:150000,CASH:220000},
+    holdings:{P01:900000,P04:900000,P06:450000,P02:380000,P10:700000,P13:150000,D03:180000,D02:250000,CASH:220000},
     txns:[{m:5, type:"Switch", from:"P10", to:"P06", amount:150000, note:"Increased healthcare exposure"},{m:17, type:"Withdrawal", from:"CASH", amount:120000, note:"Home renovation"}],
     external:[{name:"Singapore listed shares (CDP account)", asset:"Equity", region:"Singapore", ccy:"SGD", value:380000, date:"30 Sep 2026", inst:"CDP via OCBC Securities"}] }),
   mkClient({ id:"C6", name:"Priya Nair", cid:"AZ-10702", email:"priya.nair@example.com", riskLevel:2, since:"2022",
     objectives:"Stable income with low volatility", preferences:"SGD investments; avoids high yield", goals:"Target return of 3.5% a year",
-    holdings:{P07:500000,P09:650000,P11:300000,P12:120000,P03:250000,P16:200000,CASH:80000},
+    holdings:{P07:500000,P09:650000,P11:300000,P12:120000,P03:250000,P16:200000,D02:150000,D01:60000,CASH:80000},
     txns:[{m:11, type:"Contribution", to:"P09", amount:150000, note:"Proceeds from matured fixed deposit"}],
     external:[{name:"DBS fixed deposit", asset:"Cash", region:"Singapore", ccy:"SGD", value:300000, date:"30 Sep 2026", inst:"DBS"}] }),
   mkClient({ id:"C7", name:"Marcus Lee", cid:"AZ-10755", email:"marcus.lee@example.com", riskLevel:5, since:"2016",
     objectives:"Maximise long term growth", preferences:"Comfortable with high volatility; likes emerging markets and technology", goals:"Target return of 10% a year",
-    holdings:{P04:1500000,P02:900000,P05:800000,P01:600000,P15:700000,P13:200000,CASH:150000},
+    holdings:{P04:1500000,P02:900000,P05:800000,P01:600000,P15:700000,P13:200000,D03:400000,CASH:150000},
     txns:[{m:12, type:"Switch", from:"P15", to:"P02", amount:300000, note:"Client added to technology"},{m:19, type:"Switch", from:"CASH", to:"P05", amount:100000, note:"Added to emerging markets"}],
     external:[{name:"Cryptocurrency holdings", asset:"Other", region:"Global", ccy:"USD", value:250000, date:"30 Sep 2026", inst:"Coinbase"},{name:"Angel investment, fintech start up", asset:"Other", region:"Singapore", ccy:"SGD", value:400000, date:"31 Dec 2025", inst:"Self held"}] }),
   mkClient({ id:"C8", name:"Chen Jia Hui", greet:"Jia Hui", cid:"AZ-10811", email:"chen.jiahui@example.com", riskLevel:3, since:"2021",
@@ -832,7 +864,20 @@ function compute(clientId, spec, external) {
   if (bigT) ba = { label:`Around the ${txnView(bigT).desc.replace(/^./, c => c.toLowerCase())}`, date:txnView(bigT).date, event:txnView(bigT), before:snapStats(sim.pre[bigT.m]), after:snapStats(sim.snaps[bigT.m + 1]) };
   else ba = { label:"Start vs end of period (no transactions in the period)", date:"", event:null, before:snapStats(S), after:snapStats(E) };
 
-  return { client:c, period:p, startV, endV, netFlows, gain, twr, bret, excess:twr - bret, cum, holdings, allocEnd, allocStart, allocTotal, risk, checks,
+  const k = p.e + 1;
+  const positions = holdings.filter(h => h.end > 0.5).map(h => { const P = PROD[h.id], isCash = h.id === "CASH";
+    const ps = isCash ? null : priceSGD(h.id, k), units = isCash ? null : h.end / ps * (P.perNominal ? 100 : 1), pl = isCash ? null : priceLocal(h.id, k), fx = fxAt(P.ccy, k);
+    return { id:h.id, code:codeOf(h.id), name:h.name, type:P.type, asset:P.asset, ccy:P.ccy, units, priceLocal:pl, perNominal:!!P.perNominal, fx, valueLocal:h.end / fx, valueSGD:h.end, weight:h.weight, ret:h.ret }; });
+  const legs = [];
+  txnsIn.forEach(t => { const d = dStr(mEndDate(t.m)), kk = t.m + 1;
+    const leg = (id, sign, note) => { const P = PROD[id];
+      if (id === "CASH") legs.push({ date:d, type: sign > 0 ? "Cash in" : "Cash out", name:P.name, code:"Cash", ccy:"SGD", units:null, priceLocal:null, amount:sign * t.amount, note });
+      else { const ps = priceSGD(id, kk); legs.push({ date:d, type: sign > 0 ? "Buy" : "Sell", name:P.name, code:codeOf(id), ccy:P.ccy, units:t.amount / ps * (P.perNominal ? 100 : 1), priceLocal:priceLocal(id, kk), perNominal:!!P.perNominal, amount:sign * t.amount, note }); } };
+    if (t.from) leg(t.from, -1, t.note); if (t.to) leg(t.to, 1, t.note);
+    if (t.type === "Contribution" && t.to !== "CASH") legs.push({ date:d, type:"Cash in", name:"External contribution", code:"Cash", ccy:"SGD", units:null, priceLocal:null, amount:t.amount, note:t.note });
+    if (t.type === "Withdrawal" && t.from !== "CASH") legs.push({ date:d, type:"Cash out", name:"External withdrawal", code:"Cash", ccy:"SGD", units:null, priceLocal:null, amount:-t.amount, note:t.note });
+  });
+  return { positions, legs, asOf:dStr(mEndDate(p.e)), fxNow:FX_USD[k], client:c, period:p, startV, endV, netFlows, gain, twr, bret, excess:twr - bret, cum, holdings, allocEnd, allocStart, allocTotal, risk, checks,
     top:ranked.slice(0, 3), bottom:ranked.slice(-3).reverse(), txns, cash:E.CASH || 0, ext, extTotal, wealth, winners, losers, ba };
 }
 function institutionTxt(a) { return a.inst || "an external institution"; }
@@ -853,13 +898,15 @@ const clientOutline = cid => clone(S.outlines[cid] || DEFAULT_OUTLINE());
 function newReview(clientId, spec, at) {
   const t = at || nowISO(), id = "r" + uid();
   return { id, clientId, period:clone(spec), createdAt:t, updatedAt:t, archived:false, generated:false,
-    outline:clientOutline(clientId), inputs:{ insights:"", files:[], external:[] }, extPending:null,
+    outline:clientOutline(clientId), lang:"en", inputs:{ insights:"", files:[], external:[] }, extPending:null,
     analysis:{ versions:[], view:null, approvedV:null, chat:[] }, deck:{ versions:[], view:null, approvedV:null, chat:[] },
     comms:{ mode:null, email:null, chat:[], shares:[] }, log:[] };
 }
 const touch = (r, at) => { r.updatedAt = at || nowISO(); };
 function logEv(r, step, text, tag, at) { const t = at || nowISO(); r.log.push({ at:t, step, text, tag:tag || null }); touch(r, t); }
 const inputsSig = r => JSON.stringify([r.inputs.insights.trim(), r.inputs.files.map(f => f.name + ":" + f.size), r.inputs.external, r.outline, r.period]);
+// a language only version shares its content with the version it was translated from
+function contentRoot(an, v) { let x = an.versions.find(y => y.v === v), g = 0; while (x && x.translationOf && g++ < 30) x = an.versions.find(y => y.v === x.translationOf); return x ? x.v : v; }
 const latest = a => a.versions[a.versions.length - 1] || null;
 const verOf = (a, v) => a.versions.find(x => x.v === v) || null;
 const periodTxt = r => periodOf(r.period).label;
@@ -869,11 +916,12 @@ function status(r) {
   const an = r.analysis, dk = r.deck, cm = r.comms, la = latest(an), ld = latest(dk);
   const s2Outdated = !!la && la.inputsSig !== inputsSig(r);
   const s2Approved = an.approvedV != null && !s2Outdated;
-  const s3Outdated = !!ld && (!s2Approved || ld.basedOnAnalysisV !== an.approvedV);
+  const s3Outdated = !!ld && (!s2Approved || contentRoot(an, ld.basedOnAnalysisV) !== contentRoot(an, an.approvedV));
+  const pendingTrans = !!la && an.approvedV != null && la.v !== an.approvedV && !!la.translationOf;
   const s3Approved = dk.approvedV != null && !s3Outdated && ld && dk.approvedV === ld.v;
   const s4Outdated = !!cm.email && (!s3Approved || cm.email.basedOnDeckV !== dk.approvedV);
   const sharedCur = s3Approved && cm.shares.some(x => x.deckV === dk.approvedV);
-  return { la, ld, s2Outdated, s2Approved, s3Outdated, s3Approved, s4Outdated, sharedCur,
+  return { pendingTrans, la, ld, s2Outdated, s2Approved, s3Outdated, s3Approved, s4Outdated, sharedCur,
     reach2: r.generated, reach3: !!ld || s2Approved, reach4: s3Approved || !!cm.mode || cm.shares.length > 0 };
 }
 const STATUSES = ["Setup","Analysis in review","Report in review","Ready to share","Shared","Archived"];
@@ -987,8 +1035,9 @@ const a1Schema = r => `{
   "sections": { ${r.outline.map(s => `"${s.id}": { "commentary": "...", "flag": "" }`).join(", ")} },
   "recommendations": [ { "title": "short action title", "rationale": "1 or 2 sentences", "productIds": ["P07"], "priority": "High | Medium | Low" } ]
 }`;
+const a1Lang = r => (r._aLang || "en") === "en" ? "" : `\nLANGUAGE: write the headlines, executive summary, every section commentary and flag, and the recommendation titles and rationales in ${LANG_NAME[r._aLang]}. Product and fund names may stay in English. Copy figures exactly.`;
 function promptA1Initial(r, M, priorFeedback) {
-  return `${A1_RULES}
+  return `${A1_RULES}${a1Lang(r)}
 
 FACTS (JSON):
 ${JSON.stringify(ctxFacts(r, M))}
@@ -1004,7 +1053,7 @@ ${a1Schema(r)}`;
 }
 function promptA1Chat(r, M, current, chat, msg) {
   const hist = chat.filter(m => m.role !== "sys").slice(-12).map(m => `${m.role === "rm" ? "RM" : "Agent"}: ${m.text}`).join("\n");
-  return `${A1_RULES}
+  return `${A1_RULES}${a1Lang(r)}${(r._aLang || "en") === "en" ? "" : ` Reply to the RM in ${LANG_NAME[r._aLang]} too.`}
 8. You are now revising a draft with the RM through chat. If the RM's request is clear and allowed, apply it and return the complete updated analysis.
 9. If the request is ambiguous (for example several eligible products could fit), do not change anything: ask one short question, and suggest your preferred option.
 10. If the RM asks to change a calculated figure, do not change it: explain it comes from the system calculation (returns are time weighted, using monthly valuations).
@@ -1034,6 +1083,18 @@ Reply with only a JSON object:
   "analysis": the complete updated draft in the same shape as CURRENT DRAFT, or null if updated is false }`;
 }
 
+function promptA1Translate(r, M, current, lang) {
+  return `${A1_RULES}
+Task: rewrite the CURRENT DRAFT in ${LANG_NAME[lang]}, keeping its meaning, structure and recommendations. Translate faithfully; copy every figure exactly; keep the same section ids and productIds. Product and fund names may stay in English.
+
+FACTS (JSON):
+${JSON.stringify(ctxFacts(r, M))}
+
+CURRENT DRAFT (JSON):
+${JSON.stringify(current)}
+
+Reply with only a JSON object in the same shape as CURRENT DRAFT.`;
+}
 const LAYOUTS = `cover: title page (system fills client, period, RM). No bullets.
 summary: executive summary; bullets are the headlines; system adds key figures.
 overview: system shows value, flows, gain, cash and total wealth tiles.
@@ -1056,11 +1117,13 @@ const A2_RULES = `You are Agent 2, the Presentation Building agent for Azimut Si
 Each slide has a "layout" from this list; the system renders figures, charts and tables for the layout, and you write the title, up to 4 bullets and an optional one sentence takeaway:
 ${LAYOUTS}
 Rules: never invent or change figures; any number you write must appear exactly in FACTS or the approved analysis. Bullets are short (under 20 words each). Titles are under 8 words and state the message. Slides with data layouts need at most 2 bullets. Do not mark or caveat figures that include external assets. Keep the tone suitable for a private banking client.`;
+const a2Lang = r => { const L = r._dLang || "en", src = r._srcLang || "en"; return `Write all slide titles, bullets and takeaways in ${LANG_NAME[L]}.${L !== "en" ? " Fund and product names may stay in English." : ""}${L !== src ? ` The approved analysis is written in ${LANG_NAME[src]}, so translate its content. For text and outlook slides always provide bullets (never leave them empty). Also return "recommendations": the approved recommendations translated into ${LANG_NAME[L]}, as [{ "title": "...", "rationale": "..." }] in the same order.` : ""}`; };
 const a2Default = r => `Default structure: cover, summary, then one slide per OUTLINE section in order (${r.outline.map(s => `${s.id} -> ${LAYOUT_FOR(s.type)}`).join(", ")}), then disclaimer. Put the outline section id in "sectionId" on those slides.`;
-const A2_SCHEMA = `{ "slides": [ { "layout": "one of the layouts", "sectionId": "outline id or empty", "title": "...", "bullets": ["..."], "takeaway": "optional one sentence or empty string" } ] }`;
+const A2_SCHEMA = `{ "slides": [ { "layout": "one of the layouts", "sectionId": "outline id or empty", "title": "...", "bullets": ["..."], "takeaway": "optional one sentence or empty string" } ], "recommendations": [ { "title": "...", "rationale": "..." } ] (only when not English) }`;
 function promptA2Initial(r, M, analysis, priorFeedback) {
   return `${A2_RULES}
 ${a2Default(r)}
+${a2Lang(r)}
 
 FACTS (JSON):
 ${JSON.stringify(ctxFacts(r, M))}
@@ -1076,6 +1139,7 @@ Reply with only a JSON object: ${A2_SCHEMA}`;
 function promptA2Chat(r, M, analysis, slides, chat, msg) {
   const hist = chat.filter(m => m.role !== "sys").slice(-12).map(m => `${m.role === "rm" ? "RM" : "Agent"}: ${m.text}`).join("\n");
   return `${A2_RULES}
+${a2Lang(r)}
 You are revising the deck with the RM through chat. Slides are numbered from 1 in the order of CURRENT SLIDES. Apply clear requests (edit text, change layout, add, remove, merge or reorder slides) and return the complete deck. If a request needs a chart or table that no layout provides, use the closest layout and say so. If the request is ambiguous, ask one short question and do not change anything. If asked to change a figure, explain it comes from the system calculation.
 
 FACTS (JSON):
@@ -1093,7 +1157,7 @@ ${hist || "(none)"}
 New RM message: ${msg}
 
 Reply with only a JSON object:
-{ "reply": "1 to 3 sentences to the RM", "updated": true or false, "changes": ["..."], "slides": the complete updated slide list or null }`;
+{ "reply": "1 to 3 sentences to the RM (in English)", "updated": true or false, "changes": ["..."], "slides": the complete updated slide list or null, "recommendations": translated recommendations if not English, else omit }`;
 }
 
 const A3_RULES = `You are Agent 3, the Client Communication agent for Azimut Singapore relationship managers. You draft the email that sends a Client Portfolio Review deck to the client.
@@ -1107,10 +1171,11 @@ Key figures: portfolio return ${spct(M.twr)} vs benchmark ${spct(M.bret)}; value
 Headlines: ${(analysis.headlines || []).join(" ")}
 Recommendations for discussion: ${(analysis.recommendations || []).map(x => x.title).join("; ")}`;
 }
-const promptA3Initial = (r, M, analysis) => `${A3_RULES}\n\nMATERIAL:\n${a3Material(r, M, analysis)}\n\nReply with only a JSON object: { "subject": "...", "body": "..." }`;
+const a3Lang = r => `\nWrite the subject and body in ${LANG_NAME[r._eLang || "en"]}.${(r._eLang || "en") !== "en" ? " The RM name and email stay as they are." : ""} The material below may be in another language; translate as needed.`;
+const promptA3Initial = (r, M, analysis) => `${A3_RULES}${a3Lang(r)}\n\nMATERIAL:\n${a3Material(r, M, analysis)}\n\nReply with only a JSON object: { "subject": "...", "body": "..." }`;
 function promptA3Chat(r, M, analysis, email, chat, msg) {
   const hist = chat.filter(m => m.role !== "sys").slice(-10).map(m => `${m.role === "rm" ? "RM" : "Agent"}: ${m.text}`).join("\n");
-  return `${A3_RULES}\nYou are revising the draft with the RM. The CURRENT EMAIL may include the RM's own manual edits: keep them unless asked to change them. Apply the request and return the full email. Translations are allowed if asked.
+  return `${A3_RULES}${a3Lang(r)}\nYou are revising the draft with the RM. The CURRENT EMAIL may include the RM's own manual edits: keep them unless asked to change them. Apply the request and return the full email. Translations are allowed if asked.
 
 MATERIAL:
 ${a3Material(r, M, analysis)}
@@ -1237,7 +1302,7 @@ function paintRail() {
   const r = R(), st = status(r);
   const defs = [
     { n:1, t:"Review setup", s: r.generated ? "Completed" : "Inputs and outline", ok: r.generated, stale:false, en:true },
-    { n:2, t:"Analysis and review", s: !st.la ? "Agent 1, not started" : st.s2Outdated ? "Outdated, refresh needed" : st.s2Approved ? `Approved v${r.analysis.approvedV}` : `In review, v${st.la.v}`, ok: st.s2Approved, stale: st.s2Outdated, en: st.reach2 },
+    { n:2, t:"Analysis and review", s: !st.la ? "Agent 1, not started" : st.s2Outdated ? "Outdated, refresh needed" : st.pendingTrans && st.s2Approved ? `Approved v${r.analysis.approvedV}, v${st.la.v} to approve` : st.s2Approved ? `Approved v${r.analysis.approvedV}` : `In review, v${st.la.v}`, ok: st.s2Approved, stale: st.s2Outdated, en: st.reach2 },
     { n:3, t:"Report building", s: !st.ld ? "Agent 2, not started" : st.s3Outdated ? "Outdated, refresh needed" : st.s3Approved ? `Deck approved v${r.deck.approvedV}` : `In review, v${st.ld.v}`, ok: st.s3Approved, stale: st.s3Outdated, en: st.reach3 },
     { n:4, t:"Client communication", s: st.s4Outdated || (r.comms.shares.length && !st.s3Approved) ? "Outdated, refresh needed" : r.comms.shares.length ? `Shared ${r.comms.shares.length} time${r.comms.shares.length > 1 ? "s" : ""}` : st.s3Approved ? "Ready to share" : "Agent 3, not started", ok: st.sharedCur && !st.s4Outdated, stale: st.s4Outdated || (r.comms.shares.length > 0 && !st.s3Approved), en: st.reach4 },
   ];
@@ -1252,6 +1317,7 @@ function paintView() {
   else if (S.step === 2) v.innerHTML = viewStep2(r);
   else if (S.step === 3) v.innerHTML = viewStep3(r);
   else v.innerHTML = viewStep4(r);
+  if (r.archived) applyReadOnly(v, r);
   if (S.step === 2) drawDash(v, metrics(r));
   if (S.step === 3) drawSlides(v, r);
   fitFrames();
@@ -1363,6 +1429,15 @@ function paintModal() {
       <div class="acts"><button class="btn" data-act="closeModal">Cancel</button><button class="btn primary" data-act="olSave" ${!m.rows.length || working ? "disabled" : ""}>Save outline</button></div></div></div>`;
   }
 }
+
+const RO_ACTS = new Set(["generate","retryA","refreshA","upload","removeFile","extUpload","extUseSample","peOk","peDel","peCancel","extDel","olEdit","rpFreq","rpYear","rpPart","send","sugg","approveA","genD","refreshD","approveD","genE","refreshE","sendEmail","newEmail","markShared"]);
+function applyReadOnly(v, r) {
+  v.insertAdjacentHTML("afterbegin", `<div class="banner ro"><span><b>Archived. View only.</b> Restore this review to make changes.</span><button class="btn" data-act="restore" data-id="${r.id}">Restore review</button></div>`);
+  $$("[data-act]", v).forEach(b => { if (RO_ACTS.has(b.dataset.act)) { b.disabled = true; b.setAttribute("aria-disabled", "true"); } });
+  $$("textarea, input:not([type=file]), select", v).forEach(x => { if (x.dataset.inp === "listq") return; if (x.tagName === "SELECT") x.disabled = true; else x.readOnly = true; });
+  $$(".compose textarea, .compose button", v).forEach(x => x.disabled = true);
+  $$("details.chg, .drop, .sugg", v).forEach(x => x.style.display = "none");
+}
 /* ============ step 1 ============ */
 function viewStep1(r) {
   const c = CLIENT[r.clientId], M = metrics(r), p = periodOf(r.period), st = status(r);
@@ -1374,7 +1449,9 @@ function viewStep1(r) {
     <dt>Segment</dt><dd>${c.segment}, client since ${c.since}</dd><dt>Risk profile</dt><dd>${c.profile}, level ${c.riskLevel} of 5</dd><dt>Objectives</dt><dd>${esc(c.objectives)}</dd>
     <dt>Preferences</dt><dd>${esc(c.preferences)}</dd><dt>Goals</dt><dd>${esc(c.goals)}</dd><dt>Constraints</dt><dd>${esc(c.constraintsText)}</dd></dl></div></div>`;
   const ext = r.inputs.external;
-  const data = `<div class="card"><div class="hd"><h3>Portfolio data for this period</h3></div><div class="bd stack">
+  const tab = UI.pdTab || "summary";
+  const data = `<div class="card"><div class="hd"><h3>Portfolio data for this period</h3>${M.noData ? "" : `<div class="tabs" role="tablist" aria-label="Portfolio data views">${[["summary","Summary"],["holdings","Holdings"],["txns","Transactions"]].map(([k, l]) => `<button role="tab" aria-selected="${tab === k}" class="${tab === k ? "on" : ""}" data-act="pdTab" data-v="${k}">${l}${k === "holdings" ? ` (${M.positions.length})` : k === "txns" ? ` (${M.legs.length})` : ""}</button>`).join("")}</div>`}</div><div class="bd ${tab === "summary" && !M.noData ? "pdsum" : "stack"}">
+    ${!M.noData && tab === "holdings" ? holdingsTable(M) : !M.noData && tab === "txns" ? txnTable(M) : `
     ${M.noData ? `<div class="note bad">No portfolio data is available for this period.</div>` : `
     <div class="src"><div class="src-h"><b>Azimut Portfolio Management System</b><span class="chip">Retrieved automatically</span></div>
       <div class="kpis"><div class="kpi"><span>Value at start</span><b>${moneyC(M.startV)}</b></div><div class="kpi"><span>Value at end</span><b>${moneyC(M.endV)}</b></div>
@@ -1382,7 +1459,7 @@ function viewStep1(r) {
       <p class="small muted">Data ${p.dataRange}. Benchmark: ${esc(c.benchLabel)}. ${flagsOf(M).length ? `<b style="color:var(--warn)">${flagsOf(M).length} suitability item${flagsOf(M).length > 1 ? "s" : ""} detected</b> by the system checks.` : "No suitability issues detected."}</p></div>
     <div class="src ext"><div class="src-h"><b>Manual upload (external)</b><span class="chip warn">Uploaded by RM</span></div>
       ${ext.length ? `<div class="kpis"><div class="kpi"><span>External assets</span><b>${ext.length}</b></div><div class="kpi"><span>Total value</span><b>${moneyC(M.extTotal)}</b></div><div class="kpi"><span>Total wealth</span><b>${moneyC(M.wealth)}</b><small>Azimut plus external</small></div></div>`
-        : `<p class="small muted">No external assets uploaded. Use the card below if the client holds assets outside Azimut.</p>`}</div>`}</div></div>`;
+        : `<p class="small muted">No external assets uploaded. Use the card below if the client holds assets outside Azimut.</p>`}</div>`}`}</div></div>`;
   const pend = r.extPending, xb = busy && busy.step === "ext";
   const extCard = `<div class="card"><div class="hd"><h3>External assets</h3><span class="chip">Managed outside Azimut</span></div><div class="bd stack">
     <p class="small muted">Upload holdings the client keeps at other institutions using the Excel template${c.external.length ? ", or click Use sample to try it with example data" : ""}. They are used in this review only and are never written to Azimut's portfolio management system. They count towards total wealth and allocation, not performance.</p>
@@ -1417,10 +1494,34 @@ function viewStep1(r) {
     <input type="file" id="fileIn" multiple accept=".pdf,.xlsx,.xls,.csv,.txt,.md" hidden><div class="files">${files}</div></div></div></div>`;
   const gen = `<div class="card"><div class="bd gen-row"><div><b>${M.noData ? "No data for this period" : r.generated ? (st.s2Outdated ? "Inputs changed since the last analysis" : "Analysis already generated") : "Ready to generate"}</b>
     <p class="small muted">${M.noData ? "Choose a different review period to continue." : r.generated ? (st.s2Outdated ? "Step 2 is marked outdated. Refresh it there, or here." : "Go to Step 2 to continue the review.") : aiState === "demo" ? "Agent 1 will analyse the portfolio and draft the review (demo mode: built-in responses)." : "Agent 1 will analyse the portfolio and draft the review. This takes up to a minute."}</p></div>
-    ${!r.generated ? `<button class="btn primary big" data-act="generate" ${M.noData || busy ? "disabled" : ""}>Generate portfolio review</button>` : st.s2Outdated ? `<button class="btn warn big" data-act="refreshA" ${busy ? "disabled" : ""}>Refresh analysis</button>` : `<button class="btn primary big" data-act="go" data-n="2">Open Step 2</button>`}</div></div>`;
-  return `<div class="page-head"><div><h1>Review setup</h1><p>Check the retrieved information, add external assets and your insights, adjust the outline if needed, then generate the review.</p></div></div>
-    <div class="grid2"><div class="stack">${details}${prof}${outline}</div><div class="stack">${data}${extCard}${inputs}${gen}</div></div>`;
+    ${!r.generated ? `<div class="genbox"><label class="small muted" for="genLang">Analysis language</label>${langSelect("genLang", r.genLang || "en")}<button class="btn primary big" data-act="generate" ${M.noData || busy ? "disabled" : ""}>Generate portfolio review</button></div>` : st.s2Outdated ? `<button class="btn warn big" data-act="refreshA" ${busy ? "disabled" : ""}>Refresh analysis</button>` : `<button class="btn primary big" data-act="go" data-n="2">Open Step 2</button>`}</div></div>`;
+  return `<div class="page-head"><div><h1>Review setup</h1><p>Check the retrieved information, add external assets and your insights, adjust the outline if needed, then generate the review.</p></div><span class="saved" id="savedAt">${savedTxt(r)}</span></div>
+    <div style="margin-bottom:18px">${data}</div><div class="grid2"><div class="stack">${details}${prof}${outline}</div><div class="stack">${extCard}${inputs}${gen}</div></div>`;
 }
+
+const fmtN = (v, d = 2) => v == null ? "" : v.toLocaleString("en-SG", { minimumFractionDigits:d, maximumFractionDigits:d });
+function holdingsTable(M) {
+  const tot = sum(M.positions.map(x => x.valueSGD));
+  return `<p class="small muted">Positions in the Azimut portfolio as of ${M.asOf}${M.period.partial ? " (latest data)" : ""}. USD/SGD ${M.fxNow.toFixed(4)}. Codes, prices and quantities are fictional.</p>
+  <div class="tbl-wrap"><table class="t posn"><thead><tr><th>Holding</th><th>Type</th><th>Asset class</th><th>Ccy</th><th class="n">Quantity</th><th class="n">Price</th><th class="n">Value (local)</th><th class="n">FX</th><th class="n">Value (SGD)</th><th class="n">Weight</th><th class="n">Return</th></tr></thead><tbody>
+  ${M.positions.map(x => `<tr><td><b class="nm">${esc(x.name)}</b><div class="small muted">${esc(x.code)}</div></td><td class="muted">${x.type}</td><td class="muted">${x.asset}</td><td>${x.ccy}</td>
+    <td class="n">${x.units == null ? "" : fmtN(x.units, x.perNominal ? 0 : x.units < 100 ? 2 : 0)}${x.perNominal ? `<div class="small muted">nominal</div>` : ""}</td>
+    <td class="n">${x.priceLocal == null ? "" : fmtN(x.priceLocal, x.priceLocal < 10 ? 4 : 2)}${x.perNominal ? `<div class="small muted">per 100</div>` : ""}</td>
+    <td class="n">${fmtN(x.valueLocal, 0)}</td><td class="n">${x.ccy === "SGD" ? "1.0000" : x.fx.toFixed(4)}</td><td class="n">${fmtN(x.valueSGD, 0)}</td><td class="n">${pct(x.weight)}</td><td class="n ${x.id === "CASH" ? "" : sgn(x.ret)}">${x.id === "CASH" ? "" : spct(x.ret)}</td></tr>`).join("")}
+  <tr class="tot"><td colspan="8"><b>Total</b></td><td class="n"><b>${fmtN(tot, 0)}</b></td><td class="n"><b>100.0%</b></td><td class="n ${sgn(M.twr)}"><b>${spct(M.twr)}</b></td></tr></tbody></table></div>`;
+}
+function txnTable(M) {
+  if (!M.legs.length) return `<p class="small muted">No transactions in ${esc(M.period.label)}.</p>`;
+  return `<p class="small muted">Transactions in ${esc(M.period.label)}. Switches appear as a sell and a buy. Prices and quantities are fictional.</p>
+  <div class="tbl-wrap"><table class="t posn"><thead><tr><th>Date</th><th>Type</th><th>Holding</th><th>Ccy</th><th class="n">Quantity</th><th class="n">Price</th><th class="n">Amount (SGD)</th><th>Note</th></tr></thead><tbody>
+  ${M.legs.map(l => `<tr><td class="nowrap">${l.date}</td><td><span class="chip ${l.type === "Buy" || l.type === "Cash in" ? "ok" : "warn"}">${l.type}</span></td><td><b class="nm">${esc(l.name)}</b><div class="small muted">${esc(l.code)}</div></td><td>${l.ccy}</td>
+    <td class="n">${l.units == null ? "" : fmtN(l.units, l.perNominal ? 0 : l.units < 100 ? 2 : 0)}</td><td class="n">${l.priceLocal == null ? "" : fmtN(l.priceLocal, l.priceLocal < 10 ? 4 : 2)}</td>
+    <td class="n ${l.amount >= 0 ? "pos" : "neg"}">${fmtN(l.amount, 0)}</td><td class="muted">${esc(l.note)}</td></tr>`).join("")}</tbody></table></div>`;
+}
+
+const savedTxt = r => `<span class="dot" aria-hidden="true"></span>Saved ${fmtTime(r.updatedAt)}. Stored in this browser.`;
+
+function langSelect(inp, val, dis) { return `<select class="in langsel" id="${inp}" data-inp="${inp}" aria-label="Language" ${dis ? "disabled" : ""}>${LANGS.map(l => `<option value="${l.id}" ${val === l.id ? "selected" : ""} ${aiState === "demo" && l.id !== "en" ? "disabled" : ""}>${l.id === "en" ? "English" : l.label.split(" ")[0]}${aiState === "demo" && l.id !== "en" ? " (needs live AI)" : ""}</option>`).join("")}</select>`; }
 /* ============ chat component ============ */
 const CHAT_META = {
   a1:{ step:2, name:"Agent 1", sub:"Portfolio analysis and review", ph:"Tell Agent 1 what to change, for example: soften the tone on performance", sugg:["Make the executive summary more concise","Recommend trimming the largest risk position instead","Add more detail on currency exposure","Mention the client's concern from my notes in the outlook"] },
@@ -1429,7 +1530,7 @@ const CHAT_META = {
 };
 function chatHTML(kind, chat, disabledNote) {
   const m = CHAT_META[kind], isBusy = busy && busy.step === m.step;
-  const msgs = chat.map(x => x.role === "sys" ? `<div class="msg sys">${esc(x.text)}</div>`
+  const msgs = chat.map(x => x.role === "sys" ? `<div class="msg sys">${esc(x.text)}${x.retryLang ? ` <button class="linkbtn" data-act="retryA" data-v="${x.retryLang}">Try again</button>` : ""}</div>`
     : `<div class="msg ${x.role}">${esc(x.text)}${x.changes && x.changes.length ? `<ul>${x.changes.map(c => `<li>${esc(c)}</li>`).join("")}</ul>` : ""}${x.v ? `<span class="chip acc vtag">Created v${x.v}</span>` : ""}</div>`).join("");
   return `<aside class="card chat" aria-label="${m.name} chat"><div class="hd"><span class="bot">${ICON.bot}</span><div><b>${m.name}</b><small>${m.sub}</small></div></div>
     <div class="msgs" aria-live="polite">${msgs || `<div class="msg sys">Tell the agent what you like and what you don't. It applies clear feedback straight away and creates a new version.</div>`}</div>
@@ -1489,6 +1590,7 @@ function viewStep2(r) {
   const ch = id => P && P.sections[id] && A.sections[id] && P.sections[id].commentary !== A.sections[id].commentary;
   const banner = st.s2Outdated ? `<div class="banner"><span><b>Inputs changed.</b> Analysis v${st.la.v} was created before your latest Step 1 changes (inputs, external assets or outline).</span><button class="btn warn" data-act="refreshA" ${busy ? "disabled" : ""}>Refresh analysis</button></div>`
     : !isLatest ? `<div class="banner info"><span>You are viewing v${cur.v}, an earlier version. Feedback in the chat always revises the latest version.</span><button class="btn" data-act="viewA" data-v="${st.la.v}">View latest</button></div>`
+    : st.pendingTrans && isLatest ? `<div class="banner info"><span><b>v${cur.v} (${LANG_NAME[langOf(cur)]}) needs approval.</b> It has the same content as v${cur.translationOf}. Approved v${an.approvedV} stays in effect, and any deck built from it remains valid.</span>${an.approvedV !== cur.v ? `<button class="btn" data-act="viewA" data-v="${an.approvedV}">View approved v${an.approvedV}</button>` : ""}</div>`
     : st.s2Approved && an.approvedV === cur.v ? `<div class="banner ok"><span><b>Approved.</b> Sending new feedback creates a new version and marks the report as outdated.</span><button class="btn" data-act="go" data-n="3">Go to Step 3</button></div>` : "";
   const outline = cur.outline || r.outline, flags = flagsOf(M), infos = infosOf(M);
   const secs = outline.map((s, i) => { const d = A.sections[s.id] || { commentary:"", flag:"" };
@@ -1504,7 +1606,8 @@ function viewStep2(r) {
   ${banner}<div class="work">${chatHTML("a1", an.chat, aiState === "checking" ? "Connecting" : st.s2Outdated ? "Refresh the analysis first" : "")}
   <div class="card"><div class="toolbar">${vtabs(an, "A")}<div style="display:flex;gap:8px;align-items:center;flex-wrap:wrap">
     ${cur.source === "template" ? `<span class="chip">Template draft</span>` : ""}
-    ${an.approvedV === cur.v && st.s2Approved ? `<span class="chip ok">Approved</span>` : `<span class="chip">Draft v${cur.v}</span>`}
+    <label class="small muted" for="aLangSwitch">Language</label>${langSelect("aLangSwitch", langOf(cur), !isLatest || st.s2Outdated || !!busy)}
+    ${an.approvedV === cur.v && st.s2Approved ? `<span class="chip ok">Approved</span>` : (cur.translationOf && an.approvedV != null && an.approvedV !== cur.v ? `<span class="chip warn">Needs approval</span>` : `<span class="chip">Draft v${cur.v}</span>`)}
     <button class="btn primary" data-act="approveA" ${!isLatest || st.s2Outdated || (an.approvedV === cur.v && st.s2Approved) || working ? "disabled" : ""}>Approve v${cur.v}</button></div></div>${html}</div></div>`;
 }
 /* chart helpers */
@@ -1518,27 +1621,28 @@ function chartCfg(kind, M, theme) {
     plugins:{ legend:{ labels:{ color:ink, font:f, boxWidth:12 } } } };
   const axes = (yFmt) => ({ x:{ ticks:{ color:ink, font:f }, grid:{ color:grid } }, y:{ ticks:{ color:ink, font:f, callback:yFmt }, grid:{ color:grid } } });
   const haxes = () => ({ x:{ ticks:{ color:ink, font:f }, grid:{ color:grid } }, y:{ ticks:{ color:ink, font:f }, grid:{ display:false } } });
-  if (kind === "perf") return { type:"line", data:{ labels:M.cum.map(x => x.label), datasets:[
-      { label:"Portfolio", data:M.cum.map(x => +x.port.toFixed(2)), borderColor:PAL[0], backgroundColor:PAL[0], borderWidth:3, pointRadius:3, tension:.25 },
-      { label:"Benchmark", data:M.cum.map(x => +x.bench.toFixed(2)), borderColor:PAL[2], backgroundColor:PAL[2], borderWidth:2, borderDash:[6,4], pointRadius:2, tension:.25 }] },
+  const L = theme.lang || "en", tl = k => T(k, null, L);
+  if (kind === "perf") return { type:"line", data:{ labels:M.cum.map(x => monthL(x.label, L)), datasets:[
+      { label:tl("ch_port"), data:M.cum.map(x => +x.port.toFixed(2)), borderColor:PAL[0], backgroundColor:PAL[0], borderWidth:3, pointRadius:3, tension:.25 },
+      { label:tl("benchmark"), data:M.cum.map(x => +x.bench.toFixed(2)), borderColor:PAL[2], backgroundColor:PAL[2], borderWidth:2, borderDash:[6,4], pointRadius:2, tension:.25 }] },
     options:{ ...base, scales:axes(v => v.toFixed(1)) } };
   if (kind === "alloc" || kind === "allocT") { const arr = kind === "alloc" ? M.allocEnd.asset : M.allocTotal.asset;
-    return { type:"doughnut", data:{ labels:arr.map(x => x.k), datasets:[{ data:arr.map(x => +(x.w * 100).toFixed(1)), backgroundColor:arr.map(x => ACOL[x.k] || "#999"), borderWidth:0 }] },
-    options:{ ...base, cutout:"58%", plugins:{ ...base.plugins, legend:{ position:"right", labels:{ color:ink, font:f, boxWidth:12, generateLabels:ch => ch.data.labels.map((l, i) => ({ text:`${l} ${ch.data.datasets[0].data[i]}%`, fillStyle:ACOL[l] || "#999", strokeStyle:ACOL[l] || "#999", fontColor:ink, index:i })) } } } } }; }
+    return { type:"doughnut", data:{ labels:arr.map(x => TA(x.k, L)), datasets:[{ data:arr.map(x => +(x.w * 100).toFixed(1)), backgroundColor:arr.map(x => ACOL[x.k] || "#999"), borderWidth:0 }] },
+    options:{ ...base, cutout:"58%", plugins:{ ...base.plugins, legend:{ position:"right", labels:{ color:ink, font:f, boxWidth:12, generateLabels:ch => ch.data.labels.map((l, i) => ({ text:`${l} ${ch.data.datasets[0].data[i]}%`, fillStyle:ch.data.datasets[0].backgroundColor[i], strokeStyle:ch.data.datasets[0].backgroundColor[i], fontColor:ink, index:i })) } } } } }; }
   if (kind === "ba") { const b = M.ba.before.asset, a = M.ba.after.asset, ks = [...new Set([...b.map(x => x.k), ...a.map(x => x.k)])], w = (arr, k) => +(((arr.find(x => x.k === k) || { w:0 }).w) * 100).toFixed(1);
-    return { type:"bar", data:{ labels:ks, datasets:[{ label:"Before (%)", data:ks.map(k => w(b, k)), backgroundColor:"#9AA8B6", borderRadius:3 }, { label:"After (%)", data:ks.map(k => w(a, k)), backgroundColor:PAL[0], borderRadius:3 }] },
+    return { type:"bar", data:{ labels:ks.map(k => TA(k, L)), datasets:[{ label:tl("ch_before"), data:ks.map(k => w(b, k)), backgroundColor:"#9AA8B6", borderRadius:3 }, { label:tl("ch_after"), data:ks.map(k => w(a, k)), backgroundColor:PAL[0], borderRadius:3 }] },
       options:{ ...base, indexAxis:"y", scales:haxes() } }; }
   if (kind === "region" || kind === "ccy") { const arr = kind === "region" ? M.allocEnd.region : M.allocEnd.ccy;
-    return { type:"bar", data:{ labels:arr.map(x => x.k), datasets:[{ label: kind === "region" ? "By region (%)" : "By currency (%)", data:arr.map(x => +(x.w * 100).toFixed(1)), backgroundColor: kind === "region" ? PAL[1] : PAL[4], borderRadius:4 }] },
+    return { type:"bar", data:{ labels:arr.map(x => x.k), datasets:[{ label: kind === "region" ? tl("ch_region") : tl("ch_ccy"), data:arr.map(x => +(x.w * 100).toFixed(1)), backgroundColor: kind === "region" ? PAL[1] : PAL[4], borderRadius:4 }] },
       options:{ ...base, indexAxis:"y", plugins:{ legend:{ display:true, labels:{ color:ink, font:f, boxWidth:12 } } }, scales:haxes() } }; }
   if (kind === "contrib") { const hs = M.holdings.filter(h => h.id !== "CASH").sort((a, b) => b.contrib - a.contrib);
-    return { type:"bar", data:{ labels:hs.map(h => h.name), datasets:[{ label:"Contribution to return (%)", data:hs.map(h => +(h.contrib * 100).toFixed(2)), backgroundColor:hs.map(h => h.contrib >= 0 ? PAL[0] : PAL[5]), borderRadius:4 }] },
+    return { type:"bar", data:{ labels:hs.map(h => h.name), datasets:[{ label:tl("ch_contrib"), data:hs.map(h => +(h.contrib * 100).toFixed(2)), backgroundColor:hs.map(h => h.contrib >= 0 ? PAL[0] : PAL[5]), borderRadius:4 }] },
       options:{ ...base, indexAxis:"y", scales:haxes() } }; }
   if (kind === "rr") { const hs = M.holdings.filter(h => h.id !== "CASH" && h.start > 0.5);
     return { type:"scatter", data:{ datasets:hs.map((h, i) => ({ label:h.name, data:[{ x:h.risk + (i % 3 - 1) * 0.08, y:+(h.ret * 100).toFixed(2) }], backgroundColor:PAL[i % PAL.length], pointRadius:8 })) },
       options:{ ...base, plugins:{ legend:{ position:"right", labels:{ color:ink, font:{ ...f, size:f.size - 1 }, boxWidth:10 } } },
-        scales:{ x:{ min:0.5, max:5.5, title:{ display:true, text:"Product risk rating", color:ink, font:f }, ticks:{ stepSize:1, color:ink, font:f, callback:v => Number.isInteger(v) ? v : "" }, grid:{ color:grid } },
-          y:{ title:{ display:true, text:"Period return (%)", color:ink, font:f }, ticks:{ color:ink, font:f }, grid:{ color:grid } } } } }; }
+        scales:{ x:{ min:0.5, max:5.5, title:{ display:true, text:tl("ch_riskAx"), color:ink, font:f }, ticks:{ stepSize:1, color:ink, font:f, callback:v => Number.isInteger(v) ? v : "" }, grid:{ color:grid } },
+          y:{ title:{ display:true, text:tl("ch_retAx"), color:ink, font:f }, ticks:{ color:ink, font:f }, grid:{ color:grid } } } } }; }
 }
 function drawDash(root, M) {
   const theme = { ink:cssv("--muted"), grid:cssv("--line"), font:"IBM Plex Sans, sans-serif", size:12, responsive:true };
@@ -1552,63 +1656,67 @@ const SLIDE_THEME = { ink:"#3A4756", grid:"#E6EAEE", font:"IBM Plex Sans, Arial,
 const reviewDate = () => { const d = new Date(); return `${d.getDate()} ${MN_FULL[d.getMonth()]} ${d.getFullYear()}`; };
 const DISCLAIMER = "This review is prepared for the named client only and is for information purposes. It does not constitute an offer or solicitation. Past performance is not indicative of future results. The value of investments and the income from them can fall as well as rise. Figures are based on valuations available at the review date. Please speak to your Relationship Manager before making any investment decision. This is a prototype using fictional data.";
 function slideHTML(sl, i, n, r, M, A) {
-  const c = M.client, p = M.period;
+  const c = M.client, p = M.period, PL = periodL(p);
   const bl = (arr, size) => arr && arr.length ? `<ul class="b" ${size ? `style="font-size:${size}px"` : ""}>${arr.map(b => `<li>${esc(b)}</li>`).join("")}</ul>` : "";
   const tile = (l, v) => `<div class="tile"><span>${l}</span><b>${v}</b></div>`;
   const cv = (kind, w, h) => `<canvas data-sc="${kind}" width="${w}" height="${h}" style="width:${w}px;height:${h}px"></canvas>`;
   const take = sl.takeaway ? `<div class="take">${esc(sl.takeaway)}</div>` : "";
   const bottom = sl.takeaway ? 120 : 62;
-  const chrome = (inner) => `<div class="slide"><div class="bar"></div><div class="kick">Client Portfolio Review | ${esc(c.name)} | ${p.label}</div>
+  const chrome = (inner) => `<div class="slide" lang="${SLANG}"><div class="bar"></div><div class="kick">${T("kicker")} | ${esc(c.name)} | ${PL}</div>
     <div class="ttl">${esc(sl.title)}</div><div class="body" style="bottom:${bottom}px">${inner}</div>${take}
-    <div class="foot"><span>Azimut Singapore | Prepared for ${esc(c.name)}</span><span>${i + 1} / ${n}</span></div></div>`;
-  const tgt = c.targets;
+    <div class="foot"><span>${T("footFor", { n:esc(c.name) })}</span><span>${i + 1} / ${n}</span></div></div>`;
+  const tgt = c.targets, recs = (DREC && DREC.length === A.recommendations.length) ? A.recommendations.map((x, k) => ({ ...x, title:DREC[k].title || x.title, rationale:DREC[k].rationale || x.rationale })) : A.recommendations;
+  const H = (k) => `<div style="font-size:18px;font-weight:600;margin-bottom:6px">${T(k)}</div>`;
   switch (sl.layout) {
-    case "cover": return `<div class="slide cover"><div style="position:absolute;left:90px;top:170px;right:90px">
+    case "cover": return `<div class="slide cover" lang="${SLANG}"><div style="position:absolute;left:90px;top:170px;right:90px">
       <div style="font-size:20px;color:#9FD3CC;margin-bottom:18px">Azimut Singapore</div>
-      <div style="font-family:'IBM Plex Serif',Georgia,serif;font-size:62px;font-weight:600;line-height:1.1">${esc(sl.title || "Client Portfolio Review")}</div>
-      <div style="font-size:30px;margin-top:26px">${esc(c.name)}</div><div style="font-size:22px;color:#C9D6DE;margin-top:6px">${p.label}, ${p.range}</div>
-      <div style="font-size:18px;color:#C9D6DE;margin-top:70px">Prepared by ${RM.name}, ${RM.title}<br>${reviewDate()}</div></div><div class="band"></div></div>`;
+      <div style="font-family:'IBM Plex Serif',Georgia,serif;font-size:62px;font-weight:600;line-height:1.1">${esc(sl.title || T("kicker"))}</div>
+      <div style="font-size:30px;margin-top:26px">${esc(c.name)}</div><div style="font-size:22px;color:#C9D6DE;margin-top:6px">${PL}, ${rangeL(p)}</div>
+      <div style="font-size:18px;color:#C9D6DE;margin-top:70px">${T("prepBy", { n:RM.name, t:RM.title })}<br>${reviewDateL()}</div></div><div class="band"></div></div>`;
     case "summary": return chrome(`<div class="cols wide"><div>${bl(sl.bullets)}</div><div style="display:flex;flex-direction:column;gap:16px">
-      ${tile("Portfolio value", moneyC(M.endV))}${tile("Return, " + p.label, `<span class="${sgn(M.twr)}">${spct(M.twr)}</span>`)}${tile("Benchmark", spct(M.bret))}</div></div>`);
-    case "overview": return chrome(`<div class="tiles">${tile("Value at end", moneyC(M.endV))}${tile("Value at start", moneyC(M.startV))}${tile("Net external flows", moneyC(M.netFlows))}${tile("Investment gain", moneyC(M.gain))}${tile("Cash balance", moneyC(M.cash))}${M.ext.length ? tile("Total wealth", moneyC(M.wealth)) : tile("Holdings", M.risk.holdingsCount)}</div><div style="margin-top:26px">${bl(sl.bullets, 19)}</div>`);
+      ${tile(T("portfolioValue"), moneyC(M.endV))}${tile(T("returnP", { p:PL }), `<span class="${sgn(M.twr)}">${spct(M.twr)}</span>`)}${tile(T("benchmark"), spct(M.bret))}</div></div>`);
+    case "overview": return chrome(`<div class="tiles">${tile(T("valueEnd"), moneyC(M.endV))}${tile(T("valueStart"), moneyC(M.startV))}${tile(T("netFlows"), moneyC(M.netFlows))}${tile(T("gain"), moneyC(M.gain))}${tile(T("cash"), moneyC(M.cash))}${M.ext.length ? tile(T("wealth"), moneyC(M.wealth)) : tile(T("holdingsN"), M.risk.holdingsCount)}</div><div style="margin-top:26px">${bl(sl.bullets, 19)}</div>`);
     case "performance": return chrome(`<div class="cols wide"><div>${cv("perf", 640, sl.takeaway ? 440 : 500)}</div><div>
-      <table class="st"><tbody><tr><td>Portfolio return</td><td class="n ${sgn(M.twr)}"><b>${spct(M.twr)}</b></td></tr><tr><td>Benchmark</td><td class="n">${spct(M.bret)}</td></tr><tr><td>Difference</td><td class="n ${sgn(M.excess)}">${spct(M.excess)}</td></tr></tbody></table>
-      <p style="font-size:14px;color:#5A6777;margin:10px 0 18px">Benchmark: ${esc(c.benchLabel)}</p>${bl(sl.bullets, 18)}</div></div>`);
+      <table class="st"><tbody><tr><td>${T("portRet")}</td><td class="n ${sgn(M.twr)}"><b>${spct(M.twr)}</b></td></tr><tr><td>${T("benchmark")}</td><td class="n">${spct(M.bret)}</td></tr><tr><td>${T("diff")}</td><td class="n ${sgn(M.excess)}">${spct(M.excess)}</td></tr></tbody></table>
+      <p style="font-size:14px;color:#5A6777;margin:10px 0 18px">${T("benchLbl", { b:esc(benchL(c.benchLabel)) })}</p>${bl(sl.bullets, 18)}</div></div>`);
     case "allocation_asset": return chrome(`<div class="cols"><div>${cv("alloc", 540, sl.takeaway ? 420 : 470)}</div><div>
-      <table class="st"><thead><tr><th>Asset class</th><th class="n">Now</th><th class="n">Start</th><th class="n">Target</th>${M.ext.length ? `<th class="n">Total wealth</th>` : ""}</tr></thead><tbody>${M.allocEnd.asset.map(x => { const s0 = (M.allocStart.asset.find(y => y.k === x.k) || { w:0 }).w, t = tgt[x.k];
-        return `<tr><td>${x.k}</td><td class="n">${pct(x.w)}</td><td class="n">${pct(s0)}</td><td class="n">${t ? `${pct(t[0],0)} to ${pct(t[1],0)}` : "n/a"}</td>${M.ext.length ? `<td class="n">${pct((M.allocTotal.asset.find(y => y.k === x.k) || { w:0 }).w)}</td>` : ""}</tr>`; }).join("")}</tbody></table>
+      <table class="st"><thead><tr><th>${T("assetClass")}</th><th class="n">${T("now")}</th><th class="n">${T("start")}</th><th class="n">${T("target")}</th>${M.ext.length ? `<th class="n">${T("wealth")}</th>` : ""}</tr></thead><tbody>${M.allocEnd.asset.map(x => { const s0 = (M.allocStart.asset.find(y => y.k === x.k) || { w:0 }).w, t = tgt[x.k];
+        return `<tr><td>${TA(x.k)}</td><td class="n">${pct(x.w)}</td><td class="n">${pct(s0)}</td><td class="n">${t ? `${pct(t[0],0)}${T("to")}${pct(t[1],0)}` : "n/a"}</td>${M.ext.length ? `<td class="n">${pct((M.allocTotal.asset.find(y => y.k === x.k) || { w:0 }).w)}</td>` : ""}</tr>`; }).join("")}</tbody></table>
       <div style="margin-top:18px">${bl(sl.bullets, 17)}</div></div></div>`);
     case "allocation_breakdown": return chrome(`<div class="cols"><div>${cv("region", 540, 340)}</div><div>${cv("ccy", 540, 340)}</div></div><div style="margin-top:14px">${bl(sl.bullets, 18)}</div>`);
-    case "risk": return chrome(`<div class="tiles">${tile("Volatility (annualised)", pct(M.risk.vol))}${tile("Max drawdown (12 months)", pct(M.risk.mdd))}${tile("Top 3 holdings", pct(M.risk.top3))}${tile("High yield bonds", pct(M.risk.hy))}${tile("Non SGD exposure", pct(M.risk.nonSGD))}${tile("Product risk (1 to 5)", M.risk.wRisk.toFixed(2))}</div><div style="margin-top:26px">${bl(sl.bullets, 19)}</div>`);
-    case "holdings": { const t = (arr) => `<table class="st"><thead><tr><th>Holding</th><th class="n">Return</th><th class="n">Weight</th></tr></thead><tbody>${arr.map(h => `<tr><td>${esc(h.name)}</td><td class="n ${sgn(h.ret)}">${spct(h.ret)}</td><td class="n">${pct(h.weight)}</td></tr>`).join("")}</tbody></table>`;
-      return chrome(`<div class="cols"><div><div style="font-size:18px;font-weight:600;margin-bottom:6px">Top performers</div>${t(M.top)}</div><div><div style="font-size:18px;font-weight:600;margin-bottom:6px">Lagging holdings</div>${t(M.bottom)}</div></div><div style="margin-top:26px">${bl(sl.bullets, 19)}</div>`); }
+    case "risk": return chrome(`<div class="tiles">${tile(T("vol"), pct(M.risk.vol))}${tile(T("mdd"), pct(M.risk.mdd))}${tile(T("top3"), pct(M.risk.top3))}${tile(T("hy"), pct(M.risk.hy))}${tile(T("nonsgd"), pct(M.risk.nonSGD))}${tile(T("prisk"), M.risk.wRisk.toFixed(2))}</div><div style="margin-top:26px">${bl(sl.bullets, 19)}</div>`);
+    case "holdings": { const t = (arr) => `<table class="st"><thead><tr><th>${T("holding")}</th><th class="n">${T("ret")}</th><th class="n">${T("weight")}</th></tr></thead><tbody>${arr.map(h => `<tr><td>${esc(h.name)}</td><td class="n ${sgn(h.ret)}">${spct(h.ret)}</td><td class="n">${pct(h.weight)}</td></tr>`).join("")}</tbody></table>`;
+      return chrome(`<div class="cols"><div>${H("topPerf")}${t(M.top)}</div><div>${H("lag")}${t(M.bottom)}</div></div><div style="margin-top:26px">${bl(sl.bullets, 19)}</div>`); }
     case "contribution": return chrome(`<div class="cols wide"><div>${cv("contrib", 680, sl.takeaway ? 440 : 500)}</div><div>${bl(sl.bullets, 18)}</div></div>`);
     case "risk_return": return chrome(`<div class="cols wide"><div>${cv("rr", 700, sl.takeaway ? 440 : 500)}</div><div>${bl(sl.bullets, 18)}</div></div>`);
     case "outlook": case "text": return chrome(`<div style="max-width:1000px">${bl(sl.bullets && sl.bullets.length ? sl.bullets : [secTxt(A, sl)], 22)}</div>`);
-    case "suitability": return chrome(`<table class="st" style="font-size:16px"><thead><tr><th>Check</th><th>Value</th><th>Limit</th><th>Status</th></tr></thead><tbody>${M.checks.slice(0, 8).map(x => `<tr><td>${esc(x.label)}</td><td>${esc(x.value)}</td><td>${esc(x.limit)}</td><td><span class="pill ${x.status === "ok" ? "ok" : x.status === "warn" ? "warn" : "bad"}">${x.status === "ok" ? "Within limit" : x.status === "warn" ? "Review" : "Breach"}</span></td></tr>`).join("")}</tbody></table><div style="margin-top:16px">${bl(sl.bullets, 17)}</div>`);
-    case "winners_losers": { const t = (arr, e) => arr.length ? `<table class="st"><thead><tr><th>Position</th><th class="n">Gain</th><th class="n">Return</th></tr></thead><tbody>${arr.slice(0, 6).map(h => `<tr><td>${esc(h.name)}</td><td class="n ${sgn(h.gain)}">${moneyC(h.gain)}</td><td class="n ${sgn(h.ret)}">${spct(h.ret)}</td></tr>`).join("")}</tbody></table>` : `<p style="font-size:18px;color:#5A6777">${e}</p>`;
-      return chrome(`<div class="cols"><div><div style="font-size:18px;font-weight:600;margin-bottom:6px">Winning positions</div>${t(M.winners, "No positions gained value.")}</div><div><div style="font-size:18px;font-weight:600;margin-bottom:6px">Losing positions</div>${t(M.losers, "No positions lost value this period.")}</div></div><div style="margin-top:22px">${bl(sl.bullets, 18)}</div>`); }
+    case "suitability": return chrome(`<table class="st" style="font-size:16px"><thead><tr><th>${T("check")}</th><th>${T("val")}</th><th>${T("limit")}</th><th>${T("status")}</th></tr></thead><tbody>${M.checks.slice(0, 8).map(x => { const y = TCheck(x); return `<tr><td>${esc(y.label)}</td><td>${esc(y.value)}</td><td>${esc(y.limit)}</td><td><span class="pill ${x.status === "ok" ? "ok" : x.status === "warn" || x.status === "info" ? "warn" : "bad"}">${x.status === "ok" ? T("ok") : x.status === "breach" ? T("breach") : T("warn")}</span></td></tr>`; }).join("")}</tbody></table><div style="margin-top:16px">${bl(sl.bullets, 17)}</div>`);
+    case "winners_losers": { const t = (arr, e) => arr.length ? `<table class="st"><thead><tr><th>${T("position")}</th><th class="n">${T("gainCol")}</th><th class="n">${T("ret")}</th></tr></thead><tbody>${arr.slice(0, 6).map(h => `<tr><td>${esc(h.name)}</td><td class="n ${sgn(h.gain)}">${moneyC(h.gain)}</td><td class="n ${sgn(h.ret)}">${spct(h.ret)}</td></tr>`).join("")}</tbody></table>` : `<p style="font-size:18px;color:#5A6777">${e}</p>`;
+      return chrome(`<div class="cols"><div>${H("win")}${t(M.winners, T("noWin"))}</div><div>${H("lose")}${t(M.losers, T("noLose"))}</div></div><div style="margin-top:22px">${bl(sl.bullets, 18)}</div>`); }
     case "before_after": { const b = M.ba.before, a = M.ba.after, ks = [...new Set([...b.asset.map(x => x.k), ...a.asset.map(x => x.k)])], w = (arr, k) => (arr.find(x => x.k === k) || { w:0 }).w;
-      return chrome(`<div style="font-size:17px;color:#5A6777;margin:-6px 0 12px">${esc(M.ba.label)}${M.ba.date ? `, ${M.ba.date}` : ""}</div><div class="cols wide"><div>${cv("ba", 640, sl.takeaway ? 380 : 430)}</div><div>
-        <table class="st"><thead><tr><th></th><th class="n">Before</th><th class="n">After</th></tr></thead><tbody>${ks.map(k => `<tr><td>${k}</td><td class="n">${pct(w(b.asset, k))}</td><td class="n">${pct(w(a.asset, k))}</td></tr>`).join("")}
-        <tr><td>Product risk</td><td class="n">${b.wRisk.toFixed(2)}</td><td class="n">${a.wRisk.toFixed(2)}</td></tr></tbody></table><div style="margin-top:14px">${bl(sl.bullets, 17)}</div></div></div>`); }
-    case "recommendations": return chrome(`<div style="display:grid;grid-template-columns:1fr 1fr;gap:16px">${A.recommendations.slice(0, 4).map(x => `<div class="rc"><b>${esc(x.title)}</b><p>${esc(x.rationale)}</p>${x.productIds.length ? `<small>${x.productIds.map(id => esc(PROD[id].name)).join(", ")}</small>` : ""}</div>`).join("")}</div><div style="margin-top:14px">${bl(sl.bullets, 17)}</div>`);
-    case "disclaimer": return chrome(`<p style="font-size:17px;line-height:1.6;color:#2A3A4A;max-width:1050px">${DISCLAIMER}</p>
-      <div style="margin-top:40px;font-size:19px"><b>${RM.name}</b><br>${RM.title}, Azimut Singapore<br>${RM.email}</div>${bl(sl.bullets, 17)}`);
+      const lbl = SLANG === "en" ? `${esc(M.ba.label)}${M.ba.date ? `, ${M.ba.date}` : ""}` : M.ba.event ? T("baEvent", { d:M.ba.date }) : T("baNone");
+      return chrome(`<div style="font-size:17px;color:#5A6777;margin:-6px 0 12px">${lbl}</div><div class="cols wide"><div>${cv("ba", 640, sl.takeaway ? 380 : 430)}</div><div>
+        <table class="st"><thead><tr><th></th><th class="n">${T("before")}</th><th class="n">${T("after")}</th></tr></thead><tbody>${ks.map(k => `<tr><td>${TA(k)}</td><td class="n">${pct(w(b.asset, k))}</td><td class="n">${pct(w(a.asset, k))}</td></tr>`).join("")}
+        <tr><td>${T("prodRisk")}</td><td class="n">${b.wRisk.toFixed(2)}</td><td class="n">${a.wRisk.toFixed(2)}</td></tr></tbody></table><div style="margin-top:14px">${bl(sl.bullets, 17)}</div></div></div>`); }
+    case "recommendations": return chrome(`<div style="display:grid;grid-template-columns:1fr 1fr;gap:16px">${recs.slice(0, 4).map(x => `<div class="rc"><b>${esc(x.title)}</b><p>${esc(x.rationale)}</p>${x.productIds.length ? `<small>${x.productIds.map(id => esc(PROD[id].name)).join(", ")}</small>` : ""}</div>`).join("")}</div><div style="margin-top:14px">${bl(sl.bullets, 17)}</div>`);
+    case "disclaimer": return chrome(`<p style="font-size:17px;line-height:1.6;color:#2A3A4A;max-width:1050px">${T("disclaimer")}</p>
+      <div style="margin-top:40px;font-size:19px"><b>${RM.name}</b><br>${T("rmTitle")}, Azimut Singapore<br>${RM.email}</div>${bl(sl.bullets, 17)}`);
     default: return chrome(bl(sl.bullets));
   }
 }
+let DREC = null;
+function useDeckLang(ver) { SLANG = (ver && ver.lang) || "en"; DREC = (ver && ver.recs) || null; SLIDE_THEME.lang = SLANG; }
 const secTxt = (A, sl) => (sl.sectionId && A.sections[sl.sectionId] && A.sections[sl.sectionId].commentary) || "";
 function drawSlideCharts(root, M) { $$("canvas[data-sc]", root).forEach(cv => mkChart(cv, chartCfg(cv.dataset.sc, M, SLIDE_THEME))); }
-function drawSlides(root, r) { const M = metrics(r); drawSlideCharts(root, M); }
+function drawSlides(root, r) { const M = metrics(r), dk = r.deck; useDeckLang(verOf(dk, dk.view) || latest(dk)); drawSlideCharts(root, M); }
 
 /* ============ step 3 ============ */
 function viewStep3(r) {
   const st = status(r), dk = r.deck, an = r.analysis, M = metrics(r), working = busy && busy.step === 3;
   const head = `<div class="page-head"><div><h1>Report building</h1><p>Agent 2 turns the approved analysis into a client ready slide deck. Downloads are in Step 4 once the deck is approved.</p></div></div>`;
   if (!dk.versions.length) return head + `<div class="work">${chatHTML("a2", dk.chat, "Waiting for the first deck")}<div class="card"><div class="empty"><b>${working ? "Agent 2 is building the deck" : "No deck yet"}</b>
-    ${working ? "Slides appear here when they're ready." : st.s2Approved ? `<button class="btn primary" data-act="genD">Build the deck</button>` : `Approve the analysis in Step 2 first. <button class="btn" data-act="go" data-n="2">Go to Step 2</button>`}</div></div></div>`;
-  const cur = verOf(dk, dk.view) || st.ld, isLatest = cur.v === st.ld.v, A = verOf(an, cur.basedOnAnalysisV).data;
+    ${working ? "Slides appear here when they're ready." : st.s2Approved ? `<div class="genbox center"><span>Analysis v${an.approvedV} is approved. Choose the deck language and build the client deck.</span><div class="genrow"><label class="small muted" for="deckLang">Deck language</label>${langSelect("deckLang", UI.deckLang || langOf(verOf(an, an.approvedV)))}<button class="btn primary" data-act="genD">Build the deck</button></div></div>` : `Approve the analysis in Step 2 first. <button class="btn" data-act="go" data-n="2">Go to Step 2</button>`}</div></div></div>`;
+  const cur = verOf(dk, dk.view) || st.ld, isLatest = cur.v === st.ld.v, A = verOf(an, cur.basedOnAnalysisV).data; useDeckLang(cur);
   const n = cur.slides.length; if (S.deckSel >= n) S.deckSel = n - 1;
   const banner = st.s3Outdated ? (!st.s2Approved ? `<div class="banner"><span><b>Outdated.</b> The analysis has a newer version that is not approved yet. Approve it in Step 2, then refresh the deck.</span><button class="btn" data-act="go" data-n="2">Go to Step 2</button></div>`
       : `<div class="banner"><span><b>Outdated.</b> Deck v${st.ld.v} is based on Analysis v${st.ld.basedOnAnalysisV}; the approved analysis is now v${an.approvedV}.</span><button class="btn warn" data-act="refreshD" ${busy ? "disabled" : ""}>Refresh deck</button></div>`)
@@ -1617,7 +1725,7 @@ function viewStep3(r) {
   const sl = cur.slides[S.deckSel];
   return head + banner + `<div class="work">${chatHTML("a2", dk.chat, aiState === "checking" ? "Connecting" : st.s3Outdated ? "Refresh the deck first" : "")}
   <div class="card"><div class="toolbar">${vtabs(dk, "D")}<div style="display:flex;gap:8px;align-items:center;flex-wrap:wrap">
-    <span class="chip">Based on Analysis v${cur.basedOnAnalysisV}</span>${dk.approvedV === cur.v && st.s3Approved ? `<span class="chip ok">Approved</span>` : `<span class="chip">Draft v${cur.v}</span>`}
+    <span class="chip">Based on Analysis v${cur.basedOnAnalysisV}</span><label class="small muted" for="dLangSwitch">Language</label>${langSelect("dLangSwitch", langOf(cur), !isLatest || st.s3Outdated || !!busy)}${dk.approvedV === cur.v && st.s3Approved ? `<span class="chip ok">Approved</span>` : `<span class="chip">Draft v${cur.v}</span>`}
     <button class="btn primary" data-act="approveD" ${!isLatest || st.s3Outdated || (dk.approvedV === cur.v && st.s3Approved) || working ? "disabled" : ""}>Approve v${cur.v}</button></div></div>
     <div class="stage"><div class="frame">${slideHTML(sl, S.deckSel, n, r, M, A)}</div>
       <div style="display:flex;justify-content:space-between;align-items:center;margin-top:10px;gap:10px">
@@ -1643,10 +1751,11 @@ function viewStep4(r) {
   let panel = "";
   if (cm.mode === "email") {
     const e = cm.email, working = busy && busy.step === 4;
-    if (!e) panel = `<div class="work">${chatHTML("a3", cm.chat, "Waiting for the draft")}<div class="card"><div class="empty"><b>${working ? "Agent 3 is drafting the email" : "No draft yet"}</b>${working ? "" : `<button class="btn primary" data-act="genE" ${ready ? "" : "disabled"}>Draft email</button>`}</div></div></div>`;
+    if (!e) panel = `<div class="work">${chatHTML("a3", cm.chat, "Waiting for the draft")}<div class="card"><div class="empty"><b>${working ? "Agent 3 is drafting the email" : "Draft the email to the client"}</b>${working ? "" : `<div class="genrow" style="justify-content:center;margin-top:10px"><label class="small muted" for="mailLang">Email language</label>${langSelect("mailLang", UI.mailLang || langOf(verOf(dk, dk.approvedV)))}<button class="btn primary" data-act="genE" ${ready ? "" : "disabled"}>Draft email</button></div>`}</div></div></div>`;
     else { const sent = !!e.sentAt, lock = sent || st.s4Outdated;
       panel = `<div class="work">${chatHTML("a3", cm.chat, aiState === "checking" ? "Connecting" : sent ? "This email has been sent" : st.s4Outdated ? "Refresh the draft first" : "")}
       <div class="card email">${sent ? `<div class="sent">${ICON.check}<span style="flex:1">Sent to ${esc(M.client.email)} on ${fmtTime(e.sentAt)} (simulated)</span><button class="btn" data-act="newEmail">Prepare another email</button></div>` : ""}
+        <div class="f"><label for="eLangSwitch">Language</label><div class="v">${langSelect("eLangSwitch", langOf(e), lock || !!busy)}</div></div>
         <div class="f"><label>From</label><div class="v">${RM.name} &lt;${RM.email}&gt;</div></div>
         <div class="f"><label for="em-to">To</label><div class="v" id="em-to">${esc(M.client.name)} &lt;${esc(M.client.email)}&gt;</div></div>
         <div class="f"><label for="em-subj">Subject</label><input id="em-subj" data-inp="subj" value="${esc(e.subject)}" ${lock ? "readonly" : ""}></div>
@@ -1684,7 +1793,7 @@ async function saveFile(filename, blob) {
   if (window.claude) { toast("Downloads are not available in this view"); return false; }
   const a = document.createElement("a"); a.href = URL.createObjectURL(blob); a.download = filename; document.body.appendChild(a); a.click(); a.remove(); return true;
 }
-function deckCtx(r) { const dk = r.deck, v = verOf(dk, dk.approvedV); return { M:metrics(r), slides:v.slides, A:verOf(r.analysis, v.basedOnAnalysisV).data }; }
+function deckCtx(r) { const dk = r.deck, v = verOf(dk, dk.approvedV); useDeckLang(v); return { M:metrics(r), slides:v.slides, A:verOf(r.analysis, v.basedOnAnalysisV).data }; }
 async function exportPdf(r) {
   await Promise.all([loadLib("jspdf"), loadLib("h2c")]); if (document.fonts) await document.fonts.ready;
   const { M, slides, A } = deckCtx(r), off = $("#offscreen"), { jsPDF } = window.jspdf;
@@ -1703,7 +1812,8 @@ async function exportPptx(r) {
   await loadLib("pptx");
   const { M, slides, A } = deckCtx(r), c = M.client, p = M.period;
   const pptx = new PptxGenJS(); pptx.layout = "LAYOUT_WIDE"; pptx.author = RM.name; pptx.title = `Client Portfolio Review ${c.name} ${p.label}`;
-  const TEAL = "0C6A61", INK = "14212F", MUT = "5A6777", FONT = "Arial", SERIF = "Georgia";
+  const TEAL = "0C6A61", INK = "14212F", MUT = "5A6777", ZH = SLANG !== "en", FONT = SLANG === "zh-Hant" ? "Microsoft JhengHei" : ZH ? "Microsoft YaHei" : "Arial", SERIF = ZH ? FONT : "Georgia", PL = periodL(p);
+  const recs = (DREC && DREC.length === A.recommendations.length) ? A.recommendations.map((x, k) => ({ ...x, title:DREC[k].title || x.title, rationale:DREC[k].rationale || x.rationale })) : A.recommendations;
   const bullets = (s, arr, x, y, w, h, size = 16) => { if (arr && arr.length) s.addText(arr.map(b => ({ text:b, options:{ bullet:true, breakLine:true } })), { x, y, w, h, fontFace:FONT, fontSize:size, color:INK, valign:"top", paraSpaceAfter:8 }); };
   const tiles = (s, arr, x, y, w, cols) => arr.forEach(([l, v], i) => { const tx = x + (i % cols) * (w + 0.2), ty = y + Math.floor(i / cols) * 1.25;
     s.addShape(pptx.ShapeType.roundRect, { x:tx, y:ty, w, h:1.1, fill:{ color:"F6F8FA" }, line:{ color:"DDE3E9" }, rectRadius:0.08 });
@@ -1712,12 +1822,12 @@ async function exportPptx(r) {
     { x, y, w, colW, fontFace:FONT, fontSize:size, color:INK, border:{ type:"solid", color:"DDE3E9", pt:0.5 }, valign:"top", autoPage:false });
   const chartOpts = (x, y, w, h, extra) => Object.assign({ x, y, w, h, showLegend:true, legendPos:"b", legendFontSize:11, catAxisLabelFontSize:11, valAxisLabelFontSize:11, catAxisLabelColor:MUT, valAxisLabelColor:MUT }, extra);
   const addChart = (s, kind, x, y, w, h) => {
-    if (kind === "perf") s.addChart(pptx.ChartType.line, [{ name:"Portfolio", labels:M.cum.map(q => q.label), values:M.cum.map(q => +q.port.toFixed(2)) }, { name:"Benchmark", labels:M.cum.map(q => q.label), values:M.cum.map(q => +q.bench.toFixed(2)) }], chartOpts(x, y, w, h, { chartColors:[TEAL, "C27C0E"], lineSize:2, valAxisLabelFormatCode:"0.0" }));
-    if (kind === "alloc") s.addChart(pptx.ChartType.doughnut, [{ name:"Allocation", labels:M.allocEnd.asset.map(q => q.k), values:M.allocEnd.asset.map(q => +(q.w * 100).toFixed(1)) }], chartOpts(x, y, w, h, { chartColors:PAL.map(q => q.slice(1)), holeSize:55, legendPos:"r", showPercent:true, dataLabelColor:"FFFFFF" }));
+    if (kind === "perf") s.addChart(pptx.ChartType.line, [{ name:T("ch_port"), labels:M.cum.map(q => monthL(q.label)), values:M.cum.map(q => +q.port.toFixed(2)) }, { name:T("benchmark"), labels:M.cum.map(q => monthL(q.label)), values:M.cum.map(q => +q.bench.toFixed(2)) }], chartOpts(x, y, w, h, { chartColors:[TEAL, "C27C0E"], lineSize:2, valAxisLabelFormatCode:"0.0" }));
+    if (kind === "alloc") s.addChart(pptx.ChartType.doughnut, [{ name:"Allocation", labels:M.allocEnd.asset.map(q => TA(q.k)), values:M.allocEnd.asset.map(q => +(q.w * 100).toFixed(1)) }], chartOpts(x, y, w, h, { chartColors:PAL.map(q => q.slice(1)), holeSize:55, legendPos:"r", showPercent:true, dataLabelColor:"FFFFFF" }));
     if (kind === "region" || kind === "ccy") { const arr = kind === "region" ? M.allocEnd.region : M.allocEnd.ccy;
-      s.addChart(pptx.ChartType.bar, [{ name: kind === "region" ? "By region (%)" : "By currency (%)", labels:arr.map(q => q.k), values:arr.map(q => +(q.w * 100).toFixed(1)) }], chartOpts(x, y, w, h, { barDir:"bar", chartColors:[kind === "region" ? "2F4B7C" : "6BA292"] })); }
+      s.addChart(pptx.ChartType.bar, [{ name: kind === "region" ? T("ch_region") : T("ch_ccy"), labels:arr.map(q => q.k), values:arr.map(q => +(q.w * 100).toFixed(1)) }], chartOpts(x, y, w, h, { barDir:"bar", chartColors:[kind === "region" ? "2F4B7C" : "6BA292"] })); }
     if (kind === "contrib") { const hs = M.holdings.filter(q => q.id !== "CASH").sort((a, b) => b.contrib - a.contrib);
-      s.addChart(pptx.ChartType.bar, [{ name:"Contribution to return (%)", labels:hs.map(q => q.name), values:hs.map(q => +(q.contrib * 100).toFixed(2)) }], chartOpts(x, y, w, h, { barDir:"bar", chartColors:[TEAL] })); }
+      s.addChart(pptx.ChartType.bar, [{ name:T("ch_contrib"), labels:hs.map(q => q.name), values:hs.map(q => +(q.contrib * 100).toFixed(2)) }], chartOpts(x, y, w, h, { barDir:"bar", chartColors:[TEAL] })); }
     if (kind === "rr") { const hs = M.holdings.filter(q => q.id !== "CASH" && q.start > 0.5);
       s.addChart(pptx.ChartType.scatter, [{ name:"Risk rating", values:hs.map(q => q.risk) }, { name:"Period return (%)", values:hs.map(q => +(q.ret * 100).toFixed(2)) }], chartOpts(x, y, w, h, { lineSize:0, lineDataSymbolSize:10, chartColors:[TEAL], showLegend:false, valAxisTitle:"Return (%)", showValAxisTitle:true, catAxisTitle:"Risk rating", showCatAxisTitle:true })); }
   };
@@ -1725,50 +1835,101 @@ async function exportPptx(r) {
     const s = pptx.addSlide();
     if (sl.layout === "cover") { s.background = { color:"0F2A33" };
       s.addText("Azimut Singapore", { x:0.95, y:1.6, w:11, h:0.4, fontFace:FONT, fontSize:16, color:"9FD3CC" });
-      s.addText(sl.title || "Client Portfolio Review", { x:0.95, y:2.05, w:11.5, h:1.0, fontFace:SERIF, fontSize:44, bold:true, color:"FFFFFF" });
+      s.addText(sl.title || T("kicker"), { x:0.95, y:2.05, w:11.5, h:1.0, fontFace:SERIF, fontSize:44, bold:true, color:"FFFFFF" });
       s.addText(c.name, { x:0.95, y:3.2, w:11, h:0.5, fontFace:FONT, fontSize:24, color:"FFFFFF" });
-      s.addText(`${p.label}, ${p.range}`, { x:0.95, y:3.7, w:11, h:0.4, fontFace:FONT, fontSize:16, color:"C9D6DE" });
-      s.addText(`Prepared by ${RM.name}, ${RM.title}\n${reviewDate()}`, { x:0.95, y:5.0, w:11, h:0.8, fontFace:FONT, fontSize:14, color:"C9D6DE" });
+      s.addText(`${PL}, ${rangeL(p)}`, { x:0.95, y:3.7, w:11, h:0.4, fontFace:FONT, fontSize:16, color:"C9D6DE" });
+      s.addText(`${T("prepBy", { n:RM.name, t:RM.title })}\n${reviewDateL()}`, { x:0.95, y:5.0, w:11, h:0.8, fontFace:FONT, fontSize:14, color:"C9D6DE" });
       s.addShape(pptx.ShapeType.rect, { x:0, y:7.38, w:13.333, h:0.12, fill:{ color:"3DB0A2" }, line:{ color:"3DB0A2" } }); return; }
     s.addShape(pptx.ShapeType.rect, { x:0, y:0, w:0.15, h:7.5, fill:{ color:TEAL }, line:{ color:TEAL } });
-    s.addText(`Client Portfolio Review | ${c.name} | ${p.label}`, { x:0.6, y:0.22, w:12, h:0.3, fontFace:FONT, fontSize:11, color:MUT });
+    s.addText(`${T("kicker")} | ${c.name} | ${PL}`, { x:0.6, y:0.22, w:12, h:0.3, fontFace:FONT, fontSize:11, color:MUT });
     s.addText(sl.title, { x:0.6, y:0.55, w:12.1, h:0.8, fontFace:SERIF, fontSize:28, bold:true, color:INK });
-    s.addText(`Azimut Singapore | Prepared for ${c.name}`, { x:0.6, y:7.05, w:8, h:0.3, fontFace:FONT, fontSize:9, color:"7A8694" });
+    s.addText(T("footFor", { n:c.name }), { x:0.6, y:7.05, w:8, h:0.3, fontFace:FONT, fontSize:9, color:"7A8694" });
     s.addText(`${i + 1} / ${slides.length}`, { x:11.2, y:7.05, w:1.5, h:0.3, fontFace:FONT, fontSize:9, color:"7A8694", align:"right" });
     if (sl.takeaway) s.addText(sl.takeaway, { x:0.6, y:6.3, w:12.1, h:0.55, fontFace:FONT, fontSize:15, color:TEAL, bold:true });
     const Y = 1.5, bh = sl.takeaway ? 4.7 : 5.3;
     const t3 = (arr) => arr.map(h => [h.name, spct(h.ret), pct(h.weight)]);
     switch (sl.layout) {
-      case "summary": bullets(s, sl.bullets, 0.6, Y, 7.2, bh, 18); tiles(s, [["Portfolio value", moneyC(M.endV)], ["Return, " + p.label, spct(M.twr)], ["Benchmark", spct(M.bret)]], 8.3, Y, 4.4, 1); break;
-      case "overview": tiles(s, [["Value at end", moneyC(M.endV)], ["Value at start", moneyC(M.startV)], ["Net external flows", moneyC(M.netFlows)], ["Investment gain", moneyC(M.gain)], ["Cash balance", moneyC(M.cash)], M.ext.length ? ["Total wealth", moneyC(M.wealth)] : ["Holdings", M.risk.holdingsCount]], 0.6, Y, 3.9, 3); bullets(s, sl.bullets, 0.6, Y + 2.7, 12, bh - 2.7, 16); break;
-      case "risk": tiles(s, [["Volatility (annualised)", pct(M.risk.vol)], ["Max drawdown (12 months)", pct(M.risk.mdd)], ["Top 3 holdings", pct(M.risk.top3)], ["High yield bonds", pct(M.risk.hy)], ["Non SGD exposure", pct(M.risk.nonSGD)], ["Product risk (1 to 5)", M.risk.wRisk.toFixed(2)]], 0.6, Y, 3.9, 3); bullets(s, sl.bullets, 0.6, Y + 2.7, 12, bh - 2.7, 16); break;
-      case "performance": addChart(s, "perf", 0.6, Y, 7, bh); table(s, ["", "Return"], [["Portfolio", spct(M.twr)], ["Benchmark", spct(M.bret)], ["Difference", spct(M.excess)]], 8, Y, 4.7, [2.9, 1.8], 13); bullets(s, sl.bullets, 8, Y + 1.9, 4.7, bh - 1.9, 14); break;
-      case "allocation_asset": addChart(s, "alloc", 0.6, Y, 6, bh); table(s, ["Asset class", "Now", "Start", "Target"], M.allocEnd.asset.map(x => { const s0 = (M.allocStart.asset.find(y => y.k === x.k) || { w:0 }).w, t = c.targets[x.k]; return [x.k, pct(x.w), pct(s0), t ? `${pct(t[0],0)} to ${pct(t[1],0)}` : "n/a"]; }), 7, Y, 5.7, [2, 1.1, 1.1, 1.5], 12); bullets(s, sl.bullets, 7, Y + 3, 5.7, bh - 3, 13); break;
+      case "summary": bullets(s, sl.bullets, 0.6, Y, 7.2, bh, 18); tiles(s, [[T("portfolioValue"), moneyC(M.endV)], [T("returnP", { p:PL }), spct(M.twr)], [T("benchmark"), spct(M.bret)]], 8.3, Y, 4.4, 1); break;
+      case "overview": tiles(s, [[T("valueEnd"), moneyC(M.endV)], [T("valueStart"), moneyC(M.startV)], [T("netFlows"), moneyC(M.netFlows)], [T("gain"), moneyC(M.gain)], [T("cash"), moneyC(M.cash)], M.ext.length ? [T("wealth"), moneyC(M.wealth)] : [T("holdingsN"), M.risk.holdingsCount]], 0.6, Y, 3.9, 3); bullets(s, sl.bullets, 0.6, Y + 2.7, 12, bh - 2.7, 16); break;
+      case "risk": tiles(s, [[T("vol"), pct(M.risk.vol)], [T("mdd"), pct(M.risk.mdd)], [T("top3"), pct(M.risk.top3)], [T("hy"), pct(M.risk.hy)], [T("nonsgd"), pct(M.risk.nonSGD)], [T("prisk"), M.risk.wRisk.toFixed(2)]], 0.6, Y, 3.9, 3); bullets(s, sl.bullets, 0.6, Y + 2.7, 12, bh - 2.7, 16); break;
+      case "performance": addChart(s, "perf", 0.6, Y, 7, bh); table(s, ["", T("ret")], [[T("portRet"), spct(M.twr)], [T("benchmark"), spct(M.bret)], [T("diff"), spct(M.excess)]], 8, Y, 4.7, [2.9, 1.8], 13); bullets(s, sl.bullets, 8, Y + 1.9, 4.7, bh - 1.9, 14); break;
+      case "allocation_asset": addChart(s, "alloc", 0.6, Y, 6, bh); table(s, [T("assetClass"), T("now"), T("start"), T("target")], M.allocEnd.asset.map(x => { const s0 = (M.allocStart.asset.find(y => y.k === x.k) || { w:0 }).w, t = c.targets[x.k]; return [TA(x.k), pct(x.w), pct(s0), t ? `${pct(t[0],0)}${T("to")}${pct(t[1],0)}` : "n/a"]; }), 7, Y, 5.7, [2, 1.1, 1.1, 1.5], 12); bullets(s, sl.bullets, 7, Y + 3, 5.7, bh - 3, 13); break;
       case "allocation_breakdown": addChart(s, "region", 0.6, Y, 6, 3.6); addChart(s, "ccy", 6.8, Y, 6, 3.6); bullets(s, sl.bullets, 0.6, Y + 3.8, 12, bh - 3.8, 15); break;
-      case "holdings": s.addText("Top performers", { x:0.6, y:Y, w:5.8, h:0.35, fontFace:FONT, fontSize:15, bold:true, color:INK }); table(s, ["Holding", "Return", "Weight"], t3(M.top), 0.6, Y + 0.4, 5.8, [3.6, 1.1, 1.1]);
-        s.addText("Lagging holdings", { x:6.9, y:Y, w:5.8, h:0.35, fontFace:FONT, fontSize:15, bold:true, color:INK }); table(s, ["Holding", "Return", "Weight"], t3(M.bottom), 6.9, Y + 0.4, 5.8, [3.6, 1.1, 1.1]); bullets(s, sl.bullets, 0.6, Y + 2.6, 12, bh - 2.6, 16); break;
+      case "holdings": s.addText(T("topPerf"), { x:0.6, y:Y, w:5.8, h:0.35, fontFace:FONT, fontSize:15, bold:true, color:INK }); table(s, [T("holding"), T("ret"), T("weight")], t3(M.top), 0.6, Y + 0.4, 5.8, [3.6, 1.1, 1.1]);
+        s.addText(T("lag"), { x:6.9, y:Y, w:5.8, h:0.35, fontFace:FONT, fontSize:15, bold:true, color:INK }); table(s, [T("holding"), T("ret"), T("weight")], t3(M.bottom), 6.9, Y + 0.4, 5.8, [3.6, 1.1, 1.1]); bullets(s, sl.bullets, 0.6, Y + 2.6, 12, bh - 2.6, 16); break;
       case "contribution": addChart(s, "contrib", 0.6, Y, 7.4, bh); bullets(s, sl.bullets, 8.3, Y, 4.4, bh, 15); break;
       case "risk_return": addChart(s, "rr", 0.6, Y, 7.4, bh); bullets(s, sl.bullets, 8.3, Y, 4.4, bh, 15); break;
-      case "suitability": table(s, ["Check", "Value", "Limit", "Status"], M.checks.slice(0, 8).map(x => [x.label, x.value, x.limit, x.status === "ok" ? "Within limit" : x.status === "warn" ? "Review" : "Breach"]), 0.6, Y, 12.1, [3.4, 4.3, 2.4, 2], 12); bullets(s, sl.bullets, 0.6, Y + 3.9, 12, bh - 3.9, 13); break;
+      case "suitability": table(s, [T("check"), T("val"), T("limit"), T("status")], M.checks.slice(0, 8).map(x => { const y = TCheck(x); return [y.label, y.value, y.limit, x.status === "ok" ? T("ok") : x.status === "breach" ? T("breach") : T("warn")]; }), 0.6, Y, 12.1, [3.4, 4.3, 2.4, 2], 12); bullets(s, sl.bullets, 0.6, Y + 3.9, 12, bh - 3.9, 13); break;
       case "winners_losers": { const rows = arr => arr.slice(0, 6).map(h => [h.name, moneyC(h.gain), spct(h.ret)]);
-        s.addText("Winning positions", { x:0.6, y:Y, w:5.8, h:0.35, fontFace:FONT, fontSize:15, bold:true, color:INK }); if (M.winners.length) table(s, ["Position", "Gain", "Return"], rows(M.winners), 0.6, Y + 0.4, 5.8, [3.4, 1.2, 1.2]); else s.addText("No positions gained value.", { x:0.6, y:Y + 0.4, w:5.8, h:0.4, fontFace:FONT, fontSize:13, color:MUT });
-        s.addText("Losing positions", { x:6.9, y:Y, w:5.8, h:0.35, fontFace:FONT, fontSize:15, bold:true, color:INK }); if (M.losers.length) table(s, ["Position", "Gain", "Return"], rows(M.losers), 6.9, Y + 0.4, 5.8, [3.4, 1.2, 1.2]); else s.addText("No positions lost value this period.", { x:6.9, y:Y + 0.4, w:5.8, h:0.4, fontFace:FONT, fontSize:13, color:MUT });
+        s.addText(T("win"), { x:0.6, y:Y, w:5.8, h:0.35, fontFace:FONT, fontSize:15, bold:true, color:INK }); if (M.winners.length) table(s, [T("position"), T("gainCol"), T("ret")], rows(M.winners), 0.6, Y + 0.4, 5.8, [3.4, 1.2, 1.2]); else s.addText(T("noWin"), { x:0.6, y:Y + 0.4, w:5.8, h:0.4, fontFace:FONT, fontSize:13, color:MUT });
+        s.addText(T("lose"), { x:6.9, y:Y, w:5.8, h:0.35, fontFace:FONT, fontSize:15, bold:true, color:INK }); if (M.losers.length) table(s, [T("position"), T("gainCol"), T("ret")], rows(M.losers), 6.9, Y + 0.4, 5.8, [3.4, 1.2, 1.2]); else s.addText(T("noLose"), { x:6.9, y:Y + 0.4, w:5.8, h:0.4, fontFace:FONT, fontSize:13, color:MUT });
         bullets(s, sl.bullets, 0.6, Y + 3.2, 12, bh - 3.2, 15); break; }
       case "before_after": { const b = M.ba.before, a = M.ba.after, ks = [...new Set([...b.asset.map(x => x.k), ...a.asset.map(x => x.k)])], w = (arr, k) => (arr.find(x => x.k === k) || { w:0 }).w;
-        s.addText(M.ba.label + (M.ba.date ? ", " + M.ba.date : ""), { x:0.6, y:Y - 0.1, w:12, h:0.35, fontFace:FONT, fontSize:13, color:MUT });
-        s.addChart(pptx.ChartType.bar, [{ name:"Before (%)", labels:ks, values:ks.map(k => +(w(b.asset, k) * 100).toFixed(1)) }, { name:"After (%)", labels:ks, values:ks.map(k => +(w(a.asset, k) * 100).toFixed(1)) }], chartOpts(0.6, Y + 0.3, 7, bh - 0.3, { barDir:"bar", barGrouping:"clustered", chartColors:["9AA8B6", TEAL] }));
-        table(s, ["", "Before", "After"], [...ks.map(k => [k, pct(w(b.asset, k)), pct(w(a.asset, k))]), ["Product risk", b.wRisk.toFixed(2), a.wRisk.toFixed(2)]], 8, Y + 0.3, 4.7, [2.3, 1.2, 1.2], 12);
+        s.addText(SLANG === "en" ? M.ba.label + (M.ba.date ? ", " + M.ba.date : "") : M.ba.event ? T("baEvent", { d:M.ba.date }) : T("baNone"), { x:0.6, y:Y - 0.1, w:12, h:0.35, fontFace:FONT, fontSize:13, color:MUT });
+        s.addChart(pptx.ChartType.bar, [{ name:T("ch_before"), labels:ks.map(k => TA(k)), values:ks.map(k => +(w(b.asset, k) * 100).toFixed(1)) }, { name:T("ch_after"), labels:ks.map(k => TA(k)), values:ks.map(k => +(w(a.asset, k) * 100).toFixed(1)) }], chartOpts(0.6, Y + 0.3, 7, bh - 0.3, { barDir:"bar", barGrouping:"clustered", chartColors:["9AA8B6", TEAL] }));
+        table(s, ["", T("before"), T("after")], [...ks.map(k => [TA(k), pct(w(b.asset, k)), pct(w(a.asset, k))]), [T("prodRisk"), b.wRisk.toFixed(2), a.wRisk.toFixed(2)]], 8, Y + 0.3, 4.7, [2.3, 1.2, 1.2], 12);
         bullets(s, sl.bullets, 8, Y + 3.6, 4.7, bh - 3.6, 13); break; }
-      case "recommendations": A.recommendations.slice(0, 4).forEach((x, k) => { const tx = 0.6 + (k % 2) * 6.15, ty = Y + Math.floor(k / 2) * 2.45;
+      case "recommendations": recs.slice(0, 4).forEach((x, k) => { const tx = 0.6 + (k % 2) * 6.15, ty = Y + Math.floor(k / 2) * 2.45;
           s.addShape(pptx.ShapeType.roundRect, { x:tx, y:ty, w:5.95, h:2.25, fill:{ color:"F6F8FA" }, line:{ color:"DDE3E9" }, rectRadius:0.08 });
           s.addText([{ text:x.title, options:{ bold:true, fontSize:15, breakLine:true } }, { text:x.rationale, options:{ fontSize:12, breakLine:true } }, { text:x.productIds.map(id => PROD[id].name).join(", "), options:{ fontSize:11, color:TEAL } }], { x:tx + 0.15, y:ty + 0.1, w:5.65, h:2.05, fontFace:FONT, color:INK, valign:"top", paraSpaceAfter:4 }); }); break;
-      case "disclaimer": s.addText(DISCLAIMER, { x:0.6, y:Y, w:11.5, h:2.2, fontFace:FONT, fontSize:14, color:"2A3A4A", valign:"top" });
-        s.addText(`${RM.name}\n${RM.title}, Azimut Singapore\n${RM.email}`, { x:0.6, y:Y + 2.6, w:8, h:1.1, fontFace:FONT, fontSize:15, color:INK, valign:"top" }); break;
+      case "disclaimer": s.addText(T("disclaimer"), { x:0.6, y:Y, w:11.5, h:2.2, fontFace:FONT, fontSize:14, color:"2A3A4A", valign:"top" });
+        s.addText(`${RM.name}\n${T("rmTitle")}, Azimut Singapore\n${RM.email}`, { x:0.6, y:Y + 2.6, w:8, h:1.1, fontFace:FONT, fontSize:15, color:INK, valign:"top" }); break;
       default: bullets(s, sl.bullets && sl.bullets.length ? sl.bullets : [secTxt(A, sl)].filter(Boolean), 0.6, Y, 11.5, bh, 20);
     }
   });
   return await pptx.write({ outputType:"blob" });
 }
+/* ============ report language (client deck and email) ============ */
+const LANGS = [{ id:"en", label:"English", name:"English" }, { id:"zh-Hans", label:"简体中文 (Simplified Chinese)", name:"Simplified Chinese" }, { id:"zh-Hant", label:"繁體中文 (Traditional Chinese)", name:"Traditional Chinese" }];
+const LANG_NAME = Object.fromEntries(LANGS.map(l => [l.id, l.name]));
+const L10N = {
+  kicker:["Client Portfolio Review","客户投资组合回顾","客戶投資組合回顧"],
+  footFor:["Azimut Singapore | Prepared for {n}","Azimut Singapore | 为 {n} 编制","Azimut Singapore | 為 {n} 編製"],
+  prepBy:["Prepared by {n}, {t}","编制人：{n}，客户经理","編製人：{n}，客戶經理"],
+  rmTitle:["Relationship Manager","客户经理","客戶經理"],
+  portfolioValue:["Portfolio value","投资组合价值","投資組合價值"], returnP:["Return, {p}","{p} 回报","{p} 回報"], benchmark:["Benchmark","基准","基準"],
+  valueEnd:["Value at end","期末价值","期末價值"], valueStart:["Value at start","期初价值","期初價值"], netFlows:["Net external flows","外部资金净流入","外部資金淨流入"],
+  gain:["Investment gain","投资收益","投資收益"], cash:["Cash balance","现金余额","現金餘額"], wealth:["Total wealth","总财富","總財富"], holdingsN:["Holdings","持仓数目","持倉數目"],
+  portRet:["Portfolio return","投资组合回报","投資組合回報"], diff:["Difference","差异","差異"], benchLbl:["Benchmark: {b}","基准：{b}","基準：{b}"],
+  assetClass:["Asset class","资产类别","資產類別"], now:["Now","现在","現在"], start:["Start","期初","期初"], target:["Target","目标","目標"], to:[" to "," 至 "," 至 "],
+  vol:["Volatility (annualised)","波动率（年化）","波動率（年化）"], mdd:["Max drawdown (12 months)","最大回撤（12个月）","最大回撤（12個月）"], top3:["Top 3 holdings","前三大持仓","前三大持倉"],
+  hy:["High yield bonds","高收益债券","高收益債券"], nonsgd:["Non SGD exposure","非新元资产","非新元資產"], prisk:["Product risk (1 to 5)","产品风险（1至5）","產品風險（1至5）"],
+  topPerf:["Top performers","表现最佳","表現最佳"], lag:["Lagging holdings","表现落后","表現落後"], holding:["Holding","持仓","持倉"], ret:["Return","回报","回報"], weight:["Weight","权重","權重"],
+  win:["Winning positions","盈利持仓","盈利持倉"], lose:["Losing positions","亏损持仓","虧損持倉"], position:["Position","持仓","持倉"], gainCol:["Gain","盈亏","盈虧"],
+  noWin:["No positions gained value.","没有持仓录得盈利。","沒有持倉錄得盈利。"], noLose:["No positions lost value this period.","本期没有持仓录得亏损。","本期沒有持倉錄得虧損。"],
+  before:["Before","变动前","變動前"], after:["After","变动后","變動後"], prodRisk:["Product risk","产品风险","產品風險"], value:["Portfolio value","投资组合价值","投資組合價值"],
+  baEvent:["Around the largest transaction in the period, {d}","本期最大一笔交易前后（{d}）","本期最大一筆交易前後（{d}）"], baNone:["Start vs end of period","期初与期末对比","期初與期末對比"],
+  check:["Check","检查项目","檢查項目"], val:["Value","数值","數值"], limit:["Limit","限额","限額"], status:["Status","状态","狀態"],
+  ok:["Within limit","在限额内","在限額內"], warn:["Review","需关注","需關注"], breach:["Breach","超出限额","超出限額"],
+  c_equity:["Equity allocation","股票配置","股票配置"], c_hy:["High yield exposure","高收益债券比重","高收益債券比重"], c_single:["Largest single holding","最大单一持仓","最大單一持倉"],
+  c_risk:["Weighted product risk","加权产品风险","加權產品風險"], c_prodrisk:["Products well above risk profile","明显高于风险承受度的产品","明顯高於風險承受度的產品"],
+  c_etf:["ETF only preference","仅限ETF偏好","僅限ETF偏好"], c_liq:["Liquidity reserve","流动性储备","流動性儲備"], c_tgt:["{a} vs target range","{a}与目标范围","{a}與目標範圍"],
+  ch_port:["Portfolio","投资组合","投資組合"], ch_before:["Before (%)","变动前 (%)","變動前 (%)"], ch_after:["After (%)","变动后 (%)","變動後 (%)"],
+  ch_contrib:["Contribution to return (%)","回报贡献 (%)","回報貢獻 (%)"], ch_region:["By region (%)","按地区 (%)","按地區 (%)"], ch_ccy:["By currency (%)","按货币 (%)","按貨幣 (%)"],
+  ch_riskAx:["Product risk rating","产品风险评级","產品風險評級"], ch_retAx:["Period return (%)","期间回报 (%)","期間回報 (%)"],
+  disclaimer:["This review is prepared for the named client only and is for information purposes. It does not constitute an offer or solicitation. Past performance is not indicative of future results. The value of investments and the income from them can fall as well as rise. Figures are based on valuations available at the review date. Please speak to your Relationship Manager before making any investment decision. This is a prototype using fictional data.",
+    "本回顾仅供指定客户参考，不构成任何要约或招揽。过往表现并不代表未来业绩。投资价值及其收益可升可跌。所有数据均以回顾日可得的估值为准。作出任何投资决定前，请先与您的客户经理商讨。本文件为使用虚构数据的原型。",
+    "本回顧僅供指定客戶參考，不構成任何要約或招攬。過往表現並不代表未來業績。投資價值及其收益可升可跌。所有數據均以回顧日可得的估值為準。作出任何投資決定前，請先與您的客戶經理商討。本文件為使用虛構數據的原型。"],
+};
+const ASSET_L = { "Equity":["股票","股票"], "Fixed Income":["固定收益","固定收益"], "Multi Asset":["多元资产","多元資產"], "Cash":["现金","現金"], "Commodity":["商品","商品"], "Real Estate":["房地产","房地產"], "Other":["其他","其他"] };
+let SLANG = "en";
+const li = l => l === "zh-Hans" ? 1 : l === "zh-Hant" ? 2 : 0;
+function T(key, vars, lang) { const row = L10N[key]; let s = row ? row[li(lang || SLANG)] : key; Object.entries(vars || {}).forEach(([k, v]) => { s = s.split(`{${k}}`).join(v); }); return s; }
+const TA = (k, lang) => { const i = li(lang || SLANG); return i && ASSET_L[k] ? ASSET_L[k][i - 1] : k; };
+function TCheck(x, lang) { const L = lang || SLANG; if (L === "en") return { label:x.label, limit:x.limit, value:x.value };
+  const key = x.id.startsWith("tgt-") ? "c_tgt" : "c_" + x.id;
+  const label = x.id.startsWith("tgt-") ? T("c_tgt", { a:TA(x.id.slice(4), L) }, L) : L10N[key] ? T(key, null, L) : x.label;
+  const hans = L === "zh-Hans";
+  const limit = x.limit.replace(/^max /, "上限 ").replace(/^min /, "下限 ").replace(/^profile level/, hans ? "风险等级" : "風險等級").replace(/^rating up to/, hans ? "评级不超过" : "評級不超過").replace("ETFs only", hans ? "仅限ETF" : "僅限ETF").replace(" to ", " 至 ");
+  return { label, limit, value:x.value.replace(/ of 5$/, " / 5") }; }
+function periodL(p, lang) { const L = lang || SLANG; if (L === "en") return p.label; const y = p.year;
+  if (p.freq === "Y") return `${y}年`; if (p.freq === "H") return `${y}年${p.part === 1 ? "上半年" : "下半年"}`;
+  if (p.freq === "Q") return `${y}年第${["一","二","三","四"][p.part - 1]}${L === "zh-Hans" ? "季度" : "季"}`; return `${y}年${p.part}月`; }
+function rangeL(p, lang) { const L = lang || SLANG; if (L === "en") return p.range; const z = d => `${d.getUTCFullYear()}年${d.getUTCMonth() + 1}月${d.getUTCDate()}日`; return `${z(mStartDate(p.s))}至${z(mEndDate(p.eFull))}`; }
+function reviewDateL(lang) { const L = lang || SLANG, d = new Date(); return L === "en" ? `${d.getDate()} ${MN_FULL[d.getMonth()]} ${d.getFullYear()}` : `${d.getFullYear()}年${d.getMonth() + 1}月${d.getDate()}日`; }
+const monthL = (lbl, lang) => { const L = lang || SLANG; if (L === "en") return lbl; if (lbl === "Start") return T("start", null, L); const i = MN.indexOf(lbl.slice(0, 3)); return i >= 0 ? `${i + 1}月${lbl.length > 3 ? " " + lbl.slice(4) : ""}` : lbl; };
+const benchL = (b, lang) => { const L = lang || SLANG; if (L === "en") return b; const h = L === "zh-Hans";
+  return b.replace(/global equity/g, h ? "环球股票" : "環球股票").replace(/investment grade bonds/g, h ? "投资级债券" : "投資級債券").replace(/short duration bonds/g, h ? "短期债券" : "短期債券").replace(/SGD cash/g, h ? "新元现金" : "新元現金").replace(/, /g, "，"); };
 /* ============ built-in content: demo mode agents, templates, seeds ============ */
 const shortName = n => n.replace(/ (Fund|ETF)$/, "");
 const firstSentences = (t, n) => String(t || "").trim().split(/(?<=[.!?])\s+(?=[A-Z“"(])/).filter(Boolean).slice(0, n).map(s => s.trim());
@@ -1975,7 +2136,7 @@ const MISSIONS = [
     more:["Add your own section from “Not on the list?”, such as “Income received this year”, and see how Agent 1 handles it.", "Upload a PowerPoint or Word template of your own (needs live AI)."] },
   { id:"m4", title:"Shape it with the agents", mins:4, msg:"AI drafts, the RM stays in control.", go:"Open the analysis",
     steps:[{ k:"m4-feedback", t:"Give Agent 1 feedback in the chat" }, { k:"m4-guard", t:"Ask for a fund that isn’t eligible and see the guardrail" },
-      { k:"m4-approveA", t:"Approve the analysis" }, { k:"m4-slide", t:"Ask Agent 2 to change a slide" }, { k:"m4-approveD", t:"Approve the deck" }],
+      { k:"m4-approveA", t:"Approve the analysis" }, { k:"m4-slide", t:"Build the deck, then ask Agent 2 to change a slide" }, { k:"m4-approveD", t:"Approve the deck" }],
     phrases:[{ to:"a1", label:"Agent 1", text:"The client won't sell the tech fund in one go. Suggest trimming it in two stages." },
       { to:"a1", label:"Agent 1", text:"Can we add a Japan equity fund for the client?" }, { to:"a2", label:"Agent 2", text:"On slide 4, add a takeaway about the benchmark." }],
     more:["Ask Agent 1 to change the portfolio return to 3%. It refuses, because figures come from the system.", "Ask Agent 2 to merge two slides or change their order."] },
@@ -2038,7 +2199,7 @@ let toastT;
 function toast(msg) { let t = $(".toast"); if (!t) { t = document.createElement("div"); t.className = "toast"; t.setAttribute("role", "status"); document.body.appendChild(t); } t.textContent = msg; clearTimeout(toastT); toastT = setTimeout(() => t.remove(), 3200); }
 function confirmDlg(title, text, ok = "Confirm") {
   return new Promise(res => { const bg = document.createElement("div"); bg.className = "modal-bg top";
-    bg.innerHTML = `<div class="modal" role="dialog" aria-modal="true" aria-labelledby="mdT"><h3 id="mdT">${esc(title)}</h3><p>${esc(text)}</p><div class="acts"><button class="btn" data-x="0">Cancel</button><button class="btn primary" data-x="1">${esc(ok)}</button></div></div>`;
+    bg.innerHTML = `<div class="modal" role="dialog" aria-modal="true" aria-labelledby="mdT"><h3 id="mdT">${esc(title)}</h3>${String(text).split("\n\n").map(t => `<p style="margin-top:8px">${esc(t)}</p>`).join("")}<div class="acts"><button class="btn" data-x="0">Cancel</button><button class="btn primary" data-x="1">${esc(ok)}</button></div></div>`;
     document.body.appendChild(bg); bg.querySelector('[data-x="1"]').focus();
     const done = v => { bg.remove(); document.removeEventListener("keydown", key, true); res(v); };
     const key = e => { if (e.key === "Escape") { e.stopPropagation(); done(false); } };
@@ -2047,6 +2208,8 @@ function confirmDlg(title, text, ok = "Confirm") {
 }
 async function copyText(t) { try { await navigator.clipboard.writeText(t); return true; } catch (e) {
   const ta = document.createElement("textarea"); ta.value = t; ta.style.position = "fixed"; ta.style.opacity = "0"; document.body.appendChild(ta); ta.select(); let ok = false; try { ok = document.execCommand("copy"); } catch (_) {} ta.remove(); return ok; } }
+const langOf = v => (v && v.lang) || "en";
+const cleanRecs = (res, lang, src) => lang !== src && res && Array.isArray(res.recommendations) && res.recommendations.length ? res.recommendations.map(x => ({ title:String(x.title || ""), rationale:String(x.rationale || "") })) : null;
 const rmFeedback = chat => chat.filter(m => m.role === "rm").map(m => "- " + m.text).join("\n");
 function diffSlides(a, b) { const old = new Set(a.map(s => JSON.stringify(s))); return b.map((s, i) => old.has(JSON.stringify(s)) ? -1 : i).filter(i => i >= 0); }
 const findReview = (cid, spec, exceptId) => Object.values(S.reviews).find(x => x.id !== exceptId && x.clientId === cid && periodOf(x.period).id === periodOf(spec).id);
@@ -2054,8 +2217,9 @@ function openReview(id) { const r = S.reviews[id]; if (!r) return; if (reviewSta
 const defaultPart = (f, y) => f === "Y" ? 0 : y === 2026 ? ({ H:1, Q:3, M:9 })[f] : ({ H:2, Q:4, M:12 })[f];
 
 /* ============ agent flows ============ */
-async function genAnalysis(isRefresh) {
+async function genAnalysis(isRefresh, lang) {
   const r = R(), M = metrics(r), an = r.analysis, outline = clone(r.outline);
+  lang = lang || (isRefresh && latest(an) ? langOf(latest(an)) : r.genLang) || "en"; if (!SAMPLE) lang = "en"; r._aLang = lang;
   if (!r.generated && !an.versions.length) logEv(r, 1, "Review initiated: inputs provided", "init");
   gdone("m3-gen");
   if (isRefresh) { an.chat.push({ role:"sys", text:"Refreshing from the updated Step 1 inputs. Your earlier feedback is carried over." }); logEv(r, 1, "Inputs updated; analysis refresh requested"); }
@@ -2066,22 +2230,22 @@ async function genAnalysis(isRefresh) {
   catch (e) { if (e && e.code === "cancelled") { an.chat.push({ role:"sys", text:ERR.cancelled }); render(); return; }
     an.chat.push({ role:"sys", text:errText(e) + " A standard draft was created instead." }); data = demoAnalysis(r, M, outline, fb); source = "template"; }
   const v = an.versions.length + 1;
-  an.versions.push({ v, data, source, outline, createdAt:nowISO(), inputsSig:inputsSig(r) });
+  an.versions.push({ v, data, source, lang, outline, createdAt:nowISO(), inputsSig:inputsSig(r) });
   if (an.approvedV != null) logEv(r, 2, "Approval cleared because a new analysis version was created");
   an.approvedV = null; an.view = v; r.generated = true;
   const f = flagsOf(M).length, flagged = outline.filter(s => data.sections[s.id] && data.sections[s.id].flag).length;
   an.chat.push({ role:"agent", text:`Analysis v${v} is ready${source === "template" ? " (template draft)" : ""}. ${f ? `I've flagged ${f} suitability item${f > 1 ? "s" : ""} and suggested actions for them.` : "All suitability checks are within limits."}${flagged ? ` ${flagged} outline section${flagged > 1 ? "s have" : " has"} a note about missing data.` : ""} Tell me what you'd like to change, or approve it when you're happy.`, v });
-  logEv(r, 2, `Analysis v${v} created by Agent 1${isRefresh ? " from updated inputs" : ""}`, "a-ver");
+  logEv(r, 2, `Analysis v${v} created by Agent 1${lang !== "en" ? ` in ${LANG_NAME[lang]}` : ""}${isRefresh ? " from updated inputs" : ""}`, "a-ver");
   render();
 }
 async function chatA1(msg) {
   const r = R(), M = metrics(r), an = r.analysis, st = status(r);
-  an.chat.push({ role:"rm", text:msg }); touch(r); gdone("m4-feedback"); if (/japan|eligib|crypto/i.test(msg)) gdone("m4-guard"); render();
+  r._aLang = langOf(st.la); an.chat.push({ role:"rm", text:msg }); touch(r); gdone("m4-feedback"); if (/japan|eligib|crypto/i.test(msg)) gdone("m4-guard"); render();
   try {
     const res = await runAgent(2, "Agent 1 is revising", promptA1Chat(r, M, st.la.data, an.chat.slice(0, -1), msg), () => demoA1Chat(r, M, st.la.data, msg));
     if (res && res.updated && res.analysis) {
       const v = an.versions.length + 1, wasApproved = an.approvedV != null;
-      an.versions.push({ v, data:cleanAnalysis(res.analysis, M, r.outline), source:"ai", outline:clone(r.outline), createdAt:nowISO(), inputsSig:inputsSig(r) });
+      an.versions.push({ v, data:cleanAnalysis(res.analysis, M, r.outline), source:"ai", lang:r._aLang, outline:clone(r.outline), createdAt:nowISO(), inputsSig:inputsSig(r) });
       an.view = v; an.approvedV = null;
       an.chat.push({ role:"agent", text:String(res.reply || "Done."), changes:(res.changes || []).map(String), v });
       if (wasApproved) logEv(r, 2, "Approval cleared because a new analysis version was created");
@@ -2090,31 +2254,32 @@ async function chatA1(msg) {
   } catch (e) { an.chat.push({ role:"sys", text:errText(e) }); }
   render();
 }
-async function genDeck(isRefresh) {
+async function genDeck(isRefresh, lang) {
   const r = R(), M = metrics(r), dk = r.deck, an = r.analysis, av = verOf(an, an.approvedV), A = av.data, outline = av.outline || r.outline;
-  if (isRefresh) dk.chat.push({ role:"sys", text:`Refreshing from Analysis v${an.approvedV}. Your earlier deck feedback is carried over.` });
+  lang = lang || (latest(dk) ? langOf(latest(dk)) : langOf(av)); if (!SAMPLE) lang = "en"; r._dLang = lang; r._srcLang = langOf(av);
+  if (isRefresh) dk.chat.push({ role:"sys", text: latest(dk) && langOf(latest(dk)) !== lang ? `Rebuilding the deck in ${LANG_NAME[lang]}. Your earlier deck feedback is carried over.` : `Refreshing from Analysis v${an.approvedV}. Your earlier deck feedback is carried over.` });
   S.step = 3; render(); window.scrollTo(0, 0);
-  let slides = null, source = "ai";
+  let slides = null, source = "ai", res0 = null;
   const demoDeck = () => { let sl = tplSlides(A, outline, M); if (isRefresh) rmFeedback(dk.chat).split("\n").map(x => x.replace(/^- /, "")).filter(Boolean).forEach(m => { const x = demoA2Chat(sl, m, M, A); if (x.updated) sl = x.slides; }); return { slides:sl }; };
-  try { const res = await runAgent(3, "Agent 2 is building the deck", promptA2Initial(r, M, A, isRefresh ? rmFeedback(dk.chat) : ""), demoDeck); slides = cleanSlides(res && res.slides); if (!slides) throw { code:"invalid_json" }; if (!SAMPLE) source = "demo"; }
+  try { const res = await runAgent(3, "Agent 2 is building the deck", promptA2Initial(r, M, A, isRefresh ? rmFeedback(dk.chat) : ""), demoDeck); res0 = res; slides = cleanSlides(res && res.slides); if (!slides) throw { code:"invalid_json" }; if (!SAMPLE) source = "demo"; }
   catch (e) { if (e && e.code === "cancelled") { dk.chat.push({ role:"sys", text:ERR.cancelled }); render(); return; }
     dk.chat.push({ role:"sys", text:errText(e) + " A standard deck was created instead." }); slides = tplSlides(A, outline, M); source = "template"; }
   const v = dk.versions.length + 1, prev = latest(dk);
-  dk.versions.push({ v, slides, source, basedOnAnalysisV:an.approvedV, createdAt:nowISO(), changed: prev ? diffSlides(prev.slides, slides) : [] });
+  dk.versions.push({ v, slides, source, lang, recs:cleanRecs(res0, lang, langOf(av)), basedOnAnalysisV:an.approvedV, createdAt:nowISO(), changed: prev ? diffSlides(prev.slides, slides) : [] });
   dk.view = v; dk.approvedV = null; S.deckSel = 0;
   dk.chat.push({ role:"agent", text:`Deck v${v} is ready with ${slides.length} slides, following the client's outline and Analysis v${an.approvedV}. Tell me what to change on any slide, or approve it.`, v });
-  logEv(r, 3, `Deck v${v} created by Agent 2 from Analysis v${an.approvedV}`);
+  logEv(r, 3, `Deck v${v} created by Agent 2 from Analysis v${an.approvedV}${lang !== "en" ? ` in ${LANG_NAME[lang]}` : ""}`);
   render();
 }
 async function chatA2(msg) {
   const r = R(), M = metrics(r), dk = r.deck, st = status(r), A = verOf(r.analysis, st.ld.basedOnAnalysisV).data;
-  dk.chat.push({ role:"rm", text:msg }); touch(r); gdone("m4-slide"); render();
+  r._dLang = langOf(st.ld); r._srcLang = langOf(verOf(r.analysis, st.ld.basedOnAnalysisV)); dk.chat.push({ role:"rm", text:msg }); touch(r); gdone("m4-slide"); render();
   try {
     const res = await runAgent(3, "Agent 2 is updating the deck", promptA2Chat(r, M, A, st.ld.slides, dk.chat.slice(0, -1), msg), () => demoA2Chat(st.ld.slides, msg, M, A));
     const slides = res && res.updated ? cleanSlides(res.slides) : null;
     if (slides) {
       const v = dk.versions.length + 1, changed = diffSlides(st.ld.slides, slides);
-      dk.versions.push({ v, slides, source:"ai", basedOnAnalysisV:st.ld.basedOnAnalysisV, createdAt:nowISO(), changed });
+      dk.versions.push({ v, slides, source:"ai", lang:langOf(st.ld), recs:cleanRecs(res, langOf(st.ld), r._srcLang) || st.ld.recs || null, basedOnAnalysisV:st.ld.basedOnAnalysisV, createdAt:nowISO(), changed });
       dk.view = v; dk.approvedV = null; if (changed.length) S.deckSel = changed[0];
       dk.chat.push({ role:"agent", text:String(res.reply || "Done."), changes:(res.changes || []).map(String), v });
       logEv(r, 3, `RM feedback applied; Deck v${v} created`);
@@ -2122,8 +2287,9 @@ async function chatA2(msg) {
   } catch (e) { dk.chat.push({ role:"sys", text:errText(e) }); }
   render();
 }
-async function genEmail() {
+async function genEmail(lang) {
   const r = R(), M = metrics(r), cm = r.comms, A = verOf(r.analysis, r.analysis.approvedV).data;
+  lang = lang || (cm.email ? langOf(cm.email) : langOf(verOf(r.deck, r.deck.approvedV))); if (!SAMPLE) lang = "en"; r._eLang = lang;
   render();
   let e = null;
   {
@@ -2131,20 +2297,42 @@ async function genEmail() {
     catch (err) { if (err && err.code === "cancelled") { cm.chat.push({ role:"sys", text:ERR.cancelled }); render(); return; } cm.chat.push({ role:"sys", text:errText(err) + " A template email was created instead." }); }
   }
   if (!e) e = tplEmail(r, M, A);
-  cm.email = { ...e, basedOnDeckV:r.deck.approvedV, sentAt:null, edited:false };
+  cm.email = { ...e, lang, basedOnDeckV:r.deck.approvedV, sentAt:null, edited:false };
   cm.chat.push({ role:"agent", text:"Here's a draft. Edit it directly on the right, or tell me what to change." });
-  logEv(r, 4, `Email draft created by Agent 3 for Deck v${r.deck.approvedV}`);
+  logEv(r, 4, `Email draft created by Agent 3 for Deck v${r.deck.approvedV}${lang !== "en" ? ` in ${LANG_NAME[lang]}` : ""}`);
   render();
 }
 async function chatA3(msg) {
   const r = R(), M = metrics(r), cm = r.comms, A = verOf(r.analysis, r.analysis.approvedV).data;
-  cm.chat.push({ role:"rm", text:msg }); touch(r); render();
+  r._eLang = langOf(cm.email); cm.chat.push({ role:"rm", text:msg }); touch(r); render();
   try {
     const res = await runAgent(4, "Agent 3 is revising the email", promptA3Chat(r, M, A, cm.email, cm.chat.slice(0, -1), msg), () => demoA3Chat(r, M, A, cm.email, msg));
     if (res && res.subject && res.body) { cm.email.subject = String(res.subject); cm.email.body = String(res.body); if (res.params) cm.email.params = res.params; }
     cm.chat.push({ role:"agent", text:String((res && res.reply) || "Updated.") });
   } catch (e) { cm.chat.push({ role:"sys", text:errText(e) }); }
   render();
+}
+
+async function translateA(lang) {
+  const r = R(), M = metrics(r), an = r.analysis, st = status(r), cur = st.la;
+  if (!SAMPLE || langOf(cur) === lang) return;
+  r._aLang = lang; an.chat.push({ role:"sys", text:`Creating a ${LANG_NAME[lang]} version of Analysis v${cur.v}.` }); render();
+  try { const res = await runAgent(2, `Agent 1 is creating the ${LANG_NAME[lang]} version`, promptA1Translate(r, M, cur.data, lang));
+    if (!res || typeof res !== "object") throw { code:"invalid_json" };
+    const v = an.versions.length + 1;
+    an.versions.push({ v, data:cleanAnalysis(res, M, cur.outline || r.outline), source:"ai", lang, translationOf:cur.v, outline:clone(cur.outline || r.outline), createdAt:nowISO(), inputsSig:cur.inputsSig });
+    an.view = v;
+    an.chat.push({ role:"agent", text:`Analysis v${v} is ready in ${LANG_NAME[lang]}, with the same figures, conclusions and recommendations as v${cur.v}. It needs your approval.${an.approvedV != null ? ` Approved v${an.approvedV} stays in effect, and any deck built from it remains valid.` : ""}`, v });
+    logEv(r, 2, `Analysis v${v} created in ${LANG_NAME[lang]} from v${cur.v} (language change only)`, "a-ver");
+  } catch (e) { an.chat.push(e && e.code === "cancelled" ? { role:"sys", text:`Stopped. Analysis v${cur.v} is unchanged.` } : { role:"sys", text:`${errText(e)} Analysis v${cur.v} and its approval are unchanged.`, retryLang:lang }); }
+  render();
+}
+async function confirmLangSwitch(lang) {
+  const nm = LANG_NAME[lang];
+  const ok = await confirmDlg(`Switch the analysis to ${nm}?`,
+    `A new analysis version will be created in ${nm}, keeping the same figures, conclusions, and recommendations. The new version requires approval. Existing analysis and reports will not be affected.\n\nA deck built from this approved version will default to ${nm}. You can choose another language before building the deck.`,
+    `Create ${nm} version`);
+  if (ok) translateA(lang); else render();
 }
 
 /* ============ file reading ============ */
@@ -2253,7 +2441,7 @@ const ACT = {
   toList: () => { S.view = "list"; if (S.guide.done.includes("m1-open")) gdone("m1-back"); render(); window.scrollTo(0, 0); },
   openReview: el => openReview(el.dataset.id),
   archive: el => { const r = S.reviews[el.dataset.id]; r.archived = true; logEv(r, 0, "Review archived"); toast("Review archived. Tick Show archived to see it."); render(); },
-  restore: el => { const r = S.reviews[el.dataset.id]; r.archived = false; logEv(r, 0, "Review restored"); toast("Review restored"); render(); },
+  restore: el => { const r = S.reviews[el.dataset.id]; r.archived = false; logEv(r, 0, "Review restored"); toast("Review restored. You can make changes again."); render(); },
   newReview: () => { UI.modal = { type:"new", clientId:null, spec:defaultSpec(), q:"", hi:-1 }; paintModal(); const q = $("#nrQ"); if (q) q.focus(); },
   closeModal: () => { if (UI.modal && UI.modal.type === "welcome") return ACT.wcExplore(); if (busy && busy.step === "outline") busy.ctl.abort(); UI.modal = null; paintModal(); },
   nrClient: el => { UI.modal.clientId = el.dataset.id; UI.modal.hi = nrMatches(UI.modal).findIndex(c => c.id === el.dataset.id); nrRefresh(); },
@@ -2267,7 +2455,7 @@ const ACT = {
   rpYear: el => { const r = R(), sp = clone(r.period); sp.year = +el.dataset.v; sp.part = defaultPart(sp.freq, sp.year); setPeriod(r, sp); },
   rpPart: el => { const r = R(), sp = clone(r.period); sp.part = +el.dataset.v; setPeriod(r, sp); },
   go: el => { S.step = +el.dataset.n; render(); window.scrollTo(0, 0); },
-  generate: () => genAnalysis(false),
+  generate: () => genAnalysis(false, R().genLang || "en"),
   refreshA: () => genAnalysis(true),
   upload: () => $("#fileIn").click(),
   removeFile: el => { const r = R(), f = r.inputs.files.splice(+el.dataset.i, 1)[0]; logEv(r, 1, `Material removed: ${f.name}`); render(); },
@@ -2301,15 +2489,16 @@ const ACT = {
   viewA: el => { R().analysis.view = +el.dataset.v; render(); },
   viewD: el => { R().deck.view = +el.dataset.v; S.deckSel = 0; render(); },
   approveA: () => { const r = R(), an = r.analysis; an.approvedV = an.view; gdone("m4-approveA"); logEv(r, 2, `Analysis v${an.view} approved by RM`, "a-appr");
-    if (!r.deck.versions.length) genDeck(false); else { S.step = 3; render(); } },
-  genD: () => genDeck(false),
+    S.step = 3; UI.deckLang = null; render(); window.scrollTo(0, 0); },
+  retryA: el => translateA(el.dataset.v),
+  genD: () => { const r = R(); genDeck(false, UI.deckLang || langOf(verOf(r.analysis, r.analysis.approvedV))); },
   refreshD: () => genDeck(true),
   approveD: () => { const r = R(), dk = r.deck; dk.approvedV = dk.view; gdone("m4-approveD"); logEv(r, 3, `Deck v${dk.view} approved by RM`, "d-appr"); S.step = 4; render(); window.scrollTo(0, 0); },
   slideSel: el => { S.deckSel = +el.dataset.i; render(); },
   slidePrev: () => { S.deckSel = Math.max(0, S.deckSel - 1); render(); },
   slideNext: () => { S.deckSel++; render(); },
-  mode: el => { const r = R(), st = status(r); r.comms.mode = el.dataset.mode; if (el.dataset.mode === "email") gdone("m5-email"); if (r.comms.mode === "email" && !r.comms.email && st.s3Approved) genEmail(); else render(); },
-  genE: () => genEmail(),
+  mode: el => { const r = R(), st = status(r); r.comms.mode = el.dataset.mode; if (el.dataset.mode === "email") gdone("m5-email"); render(); },
+  genE: () => { const r = R(); genEmail(UI.mailLang || langOf(verOf(r.deck, r.deck.approvedV))); },
   refreshE: async () => { const r = R(); if (r.comms.email && r.comms.email.edited && !(await confirmDlg("Replace the email draft?", "A new draft is written for the approved deck. Your manual edits to the current draft will be replaced.", "Replace draft"))) return;
     r.comms.chat.push({ role:"sys", text:`Refreshing the draft for Deck v${r.deck.approvedV}.` }); genEmail(); },
   sendEmail: async () => { const r = R(), M = metrics(r), e = r.comms.email;
@@ -2327,6 +2516,7 @@ const ACT = {
     $$('[data-act="dl"]').forEach(b => b.disabled = false); paintLog(); save(); },
   markShared: () => { const r = R(), ch = $("#chan").value; r.comms.shares.push({ type:"channel", channel:ch, at:nowISO(), deckV:r.deck.approvedV });
     logEv(r, 4, `Review shared via ${ch}, Deck v${r.deck.approvedV}`, "share"); toast("Marked as shared via " + ch); render(); },
+  pdTab: el => { UI.pdTab = el.dataset.v; paintView(); },
   logToggle: () => { S.logOpen = !S.logOpen; if (S.logOpen) gdone("m5-log"); paintLog(); save(); },
   theme: el => { S.theme = el.dataset.v; applyTheme(); render(); },
   guideToggle: () => { S.guide.open = !S.guide.open; if (S.guide.open && mDone(MISSIONS.find(m => m.id === S.guide.openM) || MISSIONS[0])) { const nx = MISSIONS.find(m => !mDone(m)); if (nx) S.guide.openM = nx.id; } paintTop(); paintGuide(); save(); },
@@ -2355,7 +2545,7 @@ function setPeriod(r, sp) {
   if (ex) { toast(`A ${periodOf(sp).label} review already exists for this client`); return; }
   r.period = sp; logEv(r, 1, `Review period changed to ${periodOf(sp).label}`); render();
 }
-document.addEventListener("click", e => { const el = e.target.closest("[data-act]"); if (!el || el.disabled) return; const f = ACT[el.dataset.act]; if (f) { e.preventDefault(); f(el); } });
+document.addEventListener("click", e => { const el = e.target.closest("[data-act]"); if (!el || el.disabled) return; if (R() && R().archived && RO_ACTS.has(el.dataset.act)) { toast("Archived reviews are view only. Restore to make changes."); return; } const f = ACT[el.dataset.act]; if (f) { e.preventDefault(); f(el); } });
 $("#rail").addEventListener("click", e => { const b = e.target.closest("[data-step]"); if (b && !b.disabled) { if (R() && reviewStatus(R()) === "Shared" && +b.dataset.step !== S.step) gdone("m1-steps"); S.step = +b.dataset.step; render(); } });
 document.addEventListener("keydown", e => {
   if (e.key === "Escape" && UI.modal) { ACT.closeModal(); return; }
@@ -2374,7 +2564,7 @@ document.addEventListener("input", e => {
   if (k === "olTitle" || k === "olDesc") { mRows()[+e.target.dataset.i][k === "olTitle" ? "title" : "desc"] = e.target.value; return; }
   if (k === "olFacts") { mRows()[+e.target.dataset.i].facts = e.target.value; if (e.target.value.trim()) gdone("m3-facts"); return; }
   const r = R(); if (!r) return;
-  if (k === "insights") { r.inputs.insights = e.target.value; touch(r); save(); if (e.target.value.trim().length >= 8) gdone("m2-insight"); }
+  if (k === "insights") { r.inputs.insights = e.target.value; touch(r); save(); const sv = $("#savedAt"); if (sv) sv.innerHTML = savedTxt(r); if (e.target.value.trim().length >= 8) gdone("m2-insight"); }
   if (k === "pe") { const row = r.extPending.rows[+e.target.dataset.i], f = e.target.dataset.f; row[f] = f === "value" ? (parseFloat(e.target.value.replace(/[^0-9.\-]/g, "")) || 0) : e.target.value; if (f === "value") row.valueCcy = "SGD"; save(); }
   if (k === "subj" && r.comms.email) { r.comms.email.subject = e.target.value; r.comms.email.edited = true; touch(r); save(); }
   if (k === "body" && r.comms.email) { r.comms.email.body = e.target.value; r.comms.email.edited = true; touch(r); save(); }
@@ -2386,6 +2576,12 @@ document.addEventListener("change", e => {
   if (e.target.id === "olFile" && e.target.files.length) { outlineFromFile(e.target.files[0]); e.target.value = ""; }
   if (k === "insights") { const r = R(); if (r && r.generated) { paintRail(); paintView(); } }
   if (k === "pe" && e.target.dataset.f === "date") { render(); }
+  if (k === "genLang") { const r = R(); r.genLang = e.target.value; save(); }
+  if (k === "deckLang") { UI.deckLang = e.target.value; }
+  if (k === "mailLang") { UI.mailLang = e.target.value; }
+  if (k === "aLangSwitch") { confirmLangSwitch(e.target.value); }
+  if (k === "dLangSwitch") { genDeck(true, e.target.value); }
+  if (k === "eLangSwitch") { (async () => { const r = R(), v = e.target.value; if (r.comms.email && r.comms.email.edited && !(await confirmDlg("Redraft the email?", `A new draft is written in ${LANG_NAME[v]}. Your manual edits to the current draft will be replaced.`, "Redraft"))) { render(); return; } r.comms.chat.push({ role:"sys", text:`Redrafting the email in ${LANG_NAME[v]}.` }); genEmail(v); })(); }
   if (k === "lists") { S.list.status = e.target.value; render(); }
   if (k === "listsort") { S.list.sort = e.target.value; render(); }
   if (k === "listarch") { S.list.archived = e.target.checked; if (!S.list.archived && S.list.status === "Archived") S.list.status = "all"; render(); }
